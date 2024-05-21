@@ -7,7 +7,6 @@
 ## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.24 serve -a 0.0.0.0:8000
 
 
-
 # [Info-信息]
 site_name: Yuen's Info Silo            # 网站名字
 site_url: http://47.113.102.164:8000   # 网站地址
@@ -330,6 +329,7 @@ markdown_extensions:
 extra_javascript:
   - javascripts/mathjax.js
   - javascripts/embed-pdf.js
+  - javascripts/bannerSlider.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
