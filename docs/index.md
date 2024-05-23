@@ -1,6 +1,4 @@
-<!-- ---
-comments: flase
---- -->
+
 
 # GitHub
 
@@ -9,22 +7,12 @@ comments: flase
 ![GitHub forks](https://img.shields.io/github/forks/yuikuen/infosilo.github.io?style=social)
 ![GitHub watchers](https://img.shields.io/github/watchers/yuikuen/infosilo.github.io?style=social)
 
-!!! tip
-    ![website](../img/wallhaven.png){: style="height:400px;width:800px"}
-
-
-
-!!! tip
-    ![website](img/Cover.png){ align=left }
-
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla et euismod nulla. Curabitur feugiat, tortor non consequat finibus, justo purus auctor massa, nec semper lorem quam in massa.
-
+!!! Bug
+    ![website](images/debug.png)
 
 
 
 ## Hello
-
-
 
 <div class="grid cards" markdown>
 
@@ -44,7 +32,7 @@ comments: flase
     Install [`mkdocs-material`](#) with [`pip`](#) and get up
     and running in minutes
 
-    [:octicons-arrow-right-24: Getting started](#)
+    [:octicons-arrow-right-24: Getting started](https://squidfunk.github.io/mkdocs-material/getting-started/)
 
 -   :fontawesome-brands-markdown:{ .lg .middle } __It's just Markdown__
 
