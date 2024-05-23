@@ -55,9 +55,9 @@ theme:
 
   ## [Logo/Icons-图标]
   # 注意logo/favicon文件必须在docs目录下,另可用链接代替
-  logo: img/logo.png                   # 网站Logo,左上角Logo图片
+  logo: images/logo.png                   # 网站Logo,左上角Logo图片
   #logo: https://cdn0.iconfinder.com/data/icons/essential-pack-4/512/11-2-1024.png
-  favicon: img/favicon.png             # 网站图标,浏览器菜单栏上显示
+  favicon: images/favicon.png             # 网站图标,浏览器菜单栏上显示
   #favicon: https://cdn1.iconfinder.com/data/icons/gestureworks_gesture_glyphs/512/stroke_letter_y_lowercase_gestureworks.png
 
   # icon更多参考 https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#site-icons
@@ -239,10 +239,10 @@ extra:
       link: https://hub.docker.com/u/yuikuen
     - icon: fontawesome/regular/envelope
       link: mailto:<yuikuen.yuen@gmail.com>
-      name: Email
+      name: G-Email
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/YuikuenY
-      name: Twitter
+      name: X-Twitter
     - icon: fontawesome/brands/weixin
       link: img/WeChat.jpg
     - icon: fontawesome/brands/qq
@@ -263,7 +263,6 @@ repo_url: https://github.com/yuikuen/infosilo.github.io.git
 copyright: >-
   Copyright &copy; 2016 - now | 🔞 Yuen / All Rights Reserved. |
 # <a href="https://beian.miit.gov.cn/" target="_blank">莞ICP备20240508号</a>
-
 
 # [Extensions-扩展]-启用了MkDocs中Material的所有markdown相关功能
 ## 参考示例 https://squidfunk.github.io/mkdocs-material/setup/extensions/
@@ -341,6 +340,9 @@ extra_javascript:
   - javascripts/bannerSlider.js
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css
 
 # [Nav-清单]
 nav:
