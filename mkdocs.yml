@@ -3,9 +3,9 @@
 ## Wcowin's Web https://wcowin.work
 ## Material for MkDocs https://squidfunk.github.io/mkdocs-material/setup/
 
-# [Executing tests]
+# [Test & Build]
 ## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.24 serve -a 0.0.0.0:8000
-
+## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.24 build
 
 # [Info-信息]
 site_name: Yuen's Info Silo            # 网站名字
@@ -67,8 +67,12 @@ theme:
     edit: material/pencil                   # 文章编辑图标,对应features参数
     view: material/eye                      # 文章查看图标,对应features参数
     repo: fontawesome/brands/github         # 右上角Git仓库图标
-    #admonition:                            # 警告
-    #tag:                                   # 标签
+    tag:                                    # 自定义标签标志
+      html: fontawesome/brands/html5
+      js: fontawesome/brands/js
+      css:  fontawesome/brands/css3
+    admonition:                             # 自定义警告标志
+      tip: fontawesome/solid/bullhorn
 
   ## [Features-功能] md文章与此功能相呼应
   ## 具体介绍 https://squidfunk.github.io/mkdocs-material/blog/2021/12/27/the-past-present-and-future/?h=features#the-past-present-and-future
@@ -127,7 +131,7 @@ plugins:
   #- blog # 博客插件 更多配置说明 https://squidfunk.github.io/mkdocs-material/plugins/blog/
   #- rss  # 订阅插件 更多配置说明 https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#rss
   - tags: # 标签插件 更多配置说明 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#setting-up-tags
-      tags_file: tag.md
+      tags_file: tags.md
   
   # 可参考官网每页MD底部显示
   # 需要安装 pip install mkdocs-git-revision-date-localized-plugin
@@ -164,6 +168,7 @@ plugins:
           build: true
           nav_translations: # 注意,导航栏中所有需要翻译的标题和副标题都可以放在这里，但不能缩进
             Home: 首页
+            About: 关于
             Note: 笔记
             Tags: 标签
             # 参考例子
@@ -243,6 +248,10 @@ extra:
     - icon: fontawesome/brands/qq
       link: img/QQ.jpg
       name: QQ
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
   # [页脚-左下角是否保留"Material for MkDocs"]
   generator: true
 
@@ -337,6 +346,7 @@ extra_javascript:
 nav:
   - Home:
     - index.md
+    - About: Home/about.md
   - Note:
     - Web Site:
         - Hugo:
@@ -344,7 +354,7 @@ nav:
         - MkDocs:
             Docker deploys MkDocs: Note/MkDocs/docker-mkdocs.md
   - Tags:
-    - tag.md
+    - tags.md
 
 
 
