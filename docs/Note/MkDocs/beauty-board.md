@@ -1,3 +1,22 @@
+# Top Bulletin Board
+
+!!! info "Reference Links"
+
+    添加顶部公告栏：https://wcowin.work/blog/websitebeauty/header.html
+
+> docs/overrides 下新建 main.html，树状结构如下：
+
+```sh
+tree -L 2
+.
+├── Dockerfile
+├── docs
+├── mkdocs.yml
+├── overrides
+│   └── main.html
+```
+
+```html
 <!--左上角For updates follow-->
 {#-
   This file was automatically generated - do not edit
@@ -26,3 +45,4 @@
   {{ super() }}
   <script src="{{ 'assets/javascripts/custom.9458f965.min.js' | url }}"></script>
 {% endblock %}
+```
