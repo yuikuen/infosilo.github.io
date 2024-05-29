@@ -1,84 +1,89 @@
-# [Reference-参考]
+# Build Declarations
+## The site was built using MkDocs as the framework, and custom styling was referenced from Eureka! & Wcowin's Web authors, thanks for sharing the technology!
+## 网站构建使用的 MkDocs 作为框架，另外自定义样式参考于 Eureka! & Wcowin's Web 两位作者，感谢技术分享！
+## Material for MkDocs https://squidfunk.github.io/mkdocs-material/setup/
 ## Eureka! http://www.cuishuaiwen.com:8000
 ## Wcowin's Web https://wcowin.work
-## Material for MkDocs https://squidfunk.github.io/mkdocs-material/setup/
 
-# [Test & Build]
+# Build Methods
+## MkDocs-Material is deployed through Docker. In addition, the official image lacks relevant Plugins, so we will refactor it first
+## 通过 Docker 部署 MkDocs-Material，另外官方镜像缺少相关 Plugins，故先行重构
+
+# Test & Build
 ## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.24 serve -a 0.0.0.0:8000
 ## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.24 build
 
-# [Info-信息]
-site_name: Yuen's Info Silo            # 网站名字
-site_url: http://47.113.102.164:8000   # 网站地址
-site_author: Mr.Yuen                   # 作者名字
-site_description: >-                   # 项目描述
+# Basic Info
+site_name: Yuen's Info Silo          # 网站名字
+site_url: http://47.113.102.164:8000 # 网站地址
+site_author: Mr.Yuen                 # 作者名字
+site_description: >-                 # 项目描述
   mó dāo bú wù kǎn chái gōng
 
-# [Theme-主题]
+# 版权信息
+copyright: >-
+  Copyright &copy; 2016 - now | 🔞 Yuen / All Rights Reserved. |
+# <a href="https://beian.miit.gov.cn/" target="_blank">莞ICP备20240508号</a>
+# 仓库信息
+edit_uri: edit/main/docs/             # 定义 URL 指向一个有效的子文件目录
+repo_name: yuikuen/infosilo.github.io # 右上角仓库名字 & 地址
+repo_url: https://github.com/yuikuen/infosilo.github.io.git
+
+
+# Theme Styles
+## 参考 https://squidfunk.github.io/mkdocs-material/setup
 theme:
-  name: material                       # 主题名称
-  custom_dir: overrides                # 主题自定义目录,定制文件会覆盖主题默认文件
-
-  ## [Colors-调色]
+  name: material        # 主题名称
+  custom_dir: overrides # 主题自定义目录(会覆盖官方默认样式)
+  # [Colors]
   palette:
-    # 单色系
-    #primary: light blue               # 顶部栏目颜色
-    #accent: light green               # 强调色,链接/标题等
-
-    # 自动切换模式
+    #primary: light blue
+    #accent: light green
+    
+    # 日夜切换
     - media: "(prefers-color-scheme)"
       toggle:
-        icon: material/brightness-auto # 切换图标
+        icon: material/brightness-auto # 自动图标
         name: Switch to light mode     # 悬浮提示语
     - media: "(prefers-color-scheme: light)"
       scheme: default                  # 日间模式
       primary: indigo                  # 日间颜色
-      accent: cyan                     # 强调色,链接/标题等可交互元件的高亮色
+      accent: cyan                     # 高亮色-链接/标题等
       toggle:
-        icon: material/brightness-7    # 日间图标
-        name: Switch to dark mode      # 悬浮提示语
+        icon: material/brightness-7
+        name: Switch to dark mode
     - media: "(prefers-color-scheme: dark)"
       scheme: slate                    # 夜间模式
       primary: black                   # 夜间颜色
-      accent: deep purple              # 强调色,链接/标题等可交互元件的高亮色
+      accent: deep purple              # 高亮色-链接/标题等
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-
-  ## [Font-字体]
+  # [Font]
   font:
     text: Roboto
     code: Roboto Mono
-  
-  ## [Language-语言]
-  language: en                         # 默认语言(标题/提示语等)
-
-  ## [Logo/Icons-图标]
-  # 注意logo/favicon文件必须在docs目录下,另可用链接代替
-  logo: images/logo.png                   # 网站Logo,左上角Logo图片
-  #logo: https://cdn0.iconfinder.com/data/icons/essential-pack-4/512/11-2-1024.png
-  favicon: images/favicon.png             # 网站图标,浏览器菜单栏上显示
-  #favicon: https://cdn1.iconfinder.com/data/icons/gestureworks_gesture_glyphs/512/stroke_letter_y_lowercase_gestureworks.png
-
-  # icon更多参考 https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#site-icons
-  icon:                                     # 主题图标,网站大多数图标都可更改,如页脚中的导航箭头
-    previous: fontawesome/solid/angles-left # 页脚导航图标,上一页
-    next: fontawesome/solid/angles-right    # 页脚导航图标,下一页
-    edit: material/pencil                   # 文章编辑图标,对应features参数
-    view: material/eye                      # 文章查看图标,对应features参数
-    repo: fontawesome/brands/github         # 右上角Git仓库图标
-    tag:                                    # 自定义标签标志
+  # [Language]
+  language: en
+  # [Icons]
+  logo: images/logo.png       # 图站Logo,左上角图 https://cdn0.iconfinder.com/data/icons/essential-pack-4/512/11-2-1024.png
+  favicon: images/favicon.png # 浏览器菜单栏上图标 https://cdn1.iconfinder.com/data/icons/gestureworks_gesture_glyphs/512/stroke_letter_y_lowercase_gestureworks.png
+  icon:
+    previous: fontawesome/solid/angles-left # 页脚导航:上一页
+    next: fontawesome/solid/angles-right    # 页脚导航:下一页
+    edit: material/pencil                   # 文章编辑图标
+    view: material/eye                      # 文章查看图标
+    repo: fontawesome/brands/github         # 右上角GitHub图标
+    tag:                                    # 自定义标签
       html: fontawesome/brands/html5
       js: fontawesome/brands/js
       css:  fontawesome/brands/css3
-    admonition:                             # 自定义警告标志
-      tip: fontawesome/solid/bullhorn
-
-  ## [Features-功能] md文章与此功能相呼应
-  ## 具体介绍 https://squidfunk.github.io/mkdocs-material/blog/2021/12/27/the-past-present-and-future/?h=features#the-past-present-and-future
+    admonition:
+      tip: fontawesome/solid/bullhorn       # 自定义警告标志
+  # [Features]
   features:
-    ###[navigation-导航]
-    #- navigation.instant         # 瞬间加载,多语言切换会导致跳回首页
+    # 导航
+    #- navigation.instant         # 瞬间加载(多语言切换会导致跳回首页)
     - navigation.instant.prefetch # 预先加载
     - navigation.instant.progress # 进度显示
     - navigation.tracking         # 锚点跟踪(地址栏中的URL会自动更新为目录中突出显示的活动锚点)
@@ -92,57 +97,49 @@ theme:
     - navigation.top              # 滚动显示返回顶部按钮
     - toc.follow                  # 目录跟踪-页面右侧小目录
     #- toc.integrate              # 目录跟踪-页面左侧大目录
-
-    ###[Search-搜索]-需启用plugins.search插件
+    # 搜索-需启用plugins.search插件
     - search.suggest              # 搜索建议
     - search.highlight            # 搜索高亮显示
     - search.share                # 搜索分享按钮
-
-    ###[Header-页眉]
+    # 页眉
     - header.autohide             # 自动隐藏
-    - announce.dismiss            # 取消临时公告
-
-    ###[Footer-页脚]
+    - announce.dismiss            # 可点X关闭临时公告
+    # 页脚
     - navigation.footer           # 底部导航栏
-
-    ###[Repository-仓库]-支持两种类型的代码操作:编辑和查看
-    - content.action.edit
-    - content.action.view
-
-    ###[Code-代码]
-    #- content.tabs.link
-    - content.code.copy
-    - content.code.select
-    - content.code.annotate
-
-    - content.tooltips
+    # 代码
+    - content.action.edit         # 支持代码编译
+    - content.action.view         # 支持代码查看
+    - content.tabs.link           # 多标签链接
+    - content.code.copy           # 代码码内容复制
+    - content.code.select         # 特定行突出显示
+    - content.code.annotate       # 代码注释
+    - content.tooltips            # 工具提示:如链接[]()或[][]
     - content.footnote.tooltips   # 脚注呈现
 
-# [Plugins-插件]
+# Plugins
 plugins:
   - search:
-      # 搜索索引时精确控制
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-  - offline # 内置的离线插件确保网站搜索工作
-  #- social # 社交名片
-  # 压缩插件
-  - minify:
-      minify_html: true
-  #- blog # 博客插件 更多配置说明 https://squidfunk.github.io/mkdocs-material/plugins/blog/
-  #- rss  # 订阅插件 更多配置说明 https://squidfunk.github.io/mkdocs-material/setup/setting-up-a-blog/#rss
-  - tags: # 标签插件 更多配置说明 https://squidfunk.github.io/mkdocs-material/setup/setting-up-tags/#setting-up-tags
-      tags_file: tags.md
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])' # 提高搜索索引精确度
+  # 需pip install mkdocs-exclude-search,搜索排除某文件
+  #- exclude-search:
+  #    exclude:
+  #      - dir/*
+  - offline # 离线插件
+  #- social # 社交插件,开启后无法运行,暂未知
+  #- blog   # 博客插件
+  #- rss    # 订阅插件
+  #- tags   # 标签插件
   
-  # 可参考官网每页MD底部显示
-  # 需要安装 pip install mkdocs-git-revision-date-localized-plugin
-  - git-revision-date-localized: # 页面底部增加更新时间
+  # 每篇文章底部显示
+  # 需：pip install mkdocs-git-revision-date-localized-plugin
+  - git-revision-date-localized: # 文章底部显示创建/更新时间
       enabled: !ENV [CI, false]  # 关闭
       type: iso_date
       enable_creation_date: true
       fallback_to_build_date: true
       exclude:                   # 排除以下文章
         - index.md
-  # 需要安装 pip install mkdocs-git-committers-plugin-2
+  # 需：pip install mkdocs-git-committers-plugin-2
   - git-committers:              # 呈现贡献者的GitHub头像
       enabled: !ENV [CI, false]  # 关闭
       repository: yuikuen/infosilo.github.io
@@ -150,9 +147,9 @@ plugins:
       exclude:                   # 排除以下文章
         - index.md
 
-  # mkdocs-static-i18n 多语言翻译插件,https://github.com/ultrabug/mkdocs-static-i18n
-  ## 插件通过识别md文件的后缀来识别,如filename.zh.md/filename.en.md
-  ## 官方作者并不认同此方式,建议通过目录方式区分,并且翻译后字样式会有所不一致的问题
+  # 多语言翻译插件 https://github.com/ultrabug/mkdocs-static-i18n
+  # 需：pip install mkdocs-static-i18n
+  # 通过文件后缀识别,如filename.zh.md/filename.en.md;另外官方作者建议通过目录来区分，如en/zh
   - i18n:
       docs_structure: suffix
       fallback_to_default: true
@@ -166,7 +163,7 @@ plugins:
         - locale: zh
           name: Chinese
           build: true
-          nav_translations: # 注意,导航栏中所有需要翻译的标题和副标题都可以放在这里，但不能缩进
+          nav_translations: # 注意,导航栏中所有需翻译的标题和副标都可放这里,但不能缩进
             Home: 首页
             About: 关于
             Note: 笔记
@@ -175,28 +172,73 @@ plugins:
             Web Site: 网站
             Hugo on Ubuntu: Ubuntu 部署 Hugo
             Docker deploys MkDocs: 使用 Docker 部署 MkDocs
-        #- locale: zh-Hant
-        #  name: Chinese(Traditional)
-        #  build: true
-        #  nav_translations:
-        #    Home: 首頁
-        #    Note: 筆記
-        #    About: 關於
+            Beautify style: 美化样式
 
-# [Extra-额外]
+# Extensions
+# 主要是 MD 文章的相关 Py 渲染功能(具体参考官网)
+# 参考 https://squidfunk.github.io/mkdocs-material/setup/extensions/
+markdown_extensions:
+  - abbr
+  - admonition
+  - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - toc:
+      permalink: true
+  - pymdownx.arithmatex:        # 允许呈现块和内联块方程
+      generic: true
+  - pymdownx.betterem:          # 开启特殊字符强调MD中的文本
+      smart_enable: all
+  - pymdownx.caret              # 开启插入符号
+  - pymdownx.mark               # 开启标记符号
+  - pymdownx.tilde              # 开启波浪形扩展
+  - pymdownx.critic:            # 突出显示文档中添加,删除或更新的部分
+      mode: view
+  - pymdownx.details            # 可展开详细说明
+  - pymdownx.emoji:             # Emoji扩展-图标/表情符号等
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - pymdownx.highlight:         # 代码块高亮
+      anchor_linenums: true
+      linenums: true            # 显示行号
+      #auto_title: true         # 显示编程语言名称
+      line_spans: __span        # 代码块的每一行都被包装在一个span中
+      pygments_lang_class: true # CSS类来标识代码块的语言
+  - pymdownx.inlinehilite       # 增加了对内联代码块语法高亮显示的支持
+  - pymdownx.keys               # 允许键盘键和组合的呈现
+  - pymdownx.smartsymbols       # 字符序列转换为相应的符号，例如版权符号或分数
+  - pymdownx.snippets           # 将任意文件中的内容嵌入文档(包括其他文档或源文件)的功能
+  - pymdownx.superfences:       # 允许任意嵌套代码和内容块，包括警告、选项卡、列表和所有其他元素
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true     # 允许使用内容选项卡
+      combine_header_slug: true
+      slugify: !!python/object/apply:pymdownx.slugs.slugify
+        kwds:
+          case: lower
+  - pymdownx.tasklist:
+      custom_checkbox: true     # 允许使用GitHub风味Markdown启发的任务列表，遵循相同的语法约定
+  - pymdownx.arithmatex:        # MathJax1数学公式支持
+      generic: true
+
+# Extra
 extra:
-  # 官方多语言切换功能,对应[Theme.Language]功能,另外多语言翻译通过目录文件来判断
-  ## 因使用了外部插件plugins.i18n,此处注释掉
+  # 官方多语言切换,以目录区分;因启用i18n插件,此注释
   #alternate:
   #  - name: English
   #    link: /en/
-  #    lang: en
   #  - name: Chinese
   #    link: /zh/
   #    lang: zh
+  # 页面状态标识符
   status:
     new: Recently added
     deprecated: Deprecated
+  # 网站分析
   analytics:
     # [Google Analytics-谷歌分析]
     provider: google
@@ -217,7 +259,7 @@ extra:
             Thanks for your feedback! Help us improve this page by
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
           # using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
-  # [Privacy-Cookie同意解决方案]
+  # [Cookie-同意解决方案]
   consent:
     title: Cookie consent
     description: >- 
@@ -225,12 +267,14 @@ extra:
       as to measure the effectiveness of our documentation and whether users
       find what they're searching for. With your consent, you're helping us to
       make our documentation better.
-
-  # [页脚-社交链接]
+  tags:
+    HTML5: html
+    JavaScript: js
+    CSS: css
+  generator: true # 是否保留'Material for MkDocs'
+  # [Social-社交链接]
+  ## 官方图标 https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled
   social:
-    # 图标使用官方内置的
-    ## 具体icon可通过https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search查找
-    #- icon: fontawesome/solid/house
     - icon: fontawesome/brands/github
       link: https://github.com/yuikuen
       name: GitHub
@@ -248,103 +292,19 @@ extra:
     - icon: fontawesome/brands/qq
       link: img/QQ.jpg
       name: QQ
-  tags:
-    HTML5: html
-    JavaScript: js
-    CSS: css
-  # [页脚-左下角是否保留"Material for MkDocs"]
-  generator: true
 
-# [Git Repository-右上角仓库信息] 
-edit_uri: edit/main/docs/ # 定义URL指向一个有效的子文件目录
-repo_name: yuikuen/infosilo.github.io # 右上角仓库名字&地址
-repo_url: https://github.com/yuikuen/infosilo.github.io.git
-
-copyright: >-
-  Copyright &copy; 2016 - now | 🔞 Yuen / All Rights Reserved. |
-# <a href="https://beian.miit.gov.cn/" target="_blank">莞ICP备20240508号</a>
-
-# [Extensions-扩展]-启用了MkDocs中Material的所有markdown相关功能
-## 参考示例 https://squidfunk.github.io/mkdocs-material/setup/extensions/
-markdown_extensions:
-  # Python Markdown
-  - abbr
-  - admonition
-  - attr_list
-  - def_list
-  - footnotes
-  - md_in_html
-  - toc:
-      permalink: true
-
-  # Python Markdown Extensions
-  ##[Arithmatex]
-  - pymdownx.arithmatex: # 允许呈现块和内联块方程
-      generic: true
-  ##[BetterEm]
-  - pymdownx.betterem: # 开启特殊字符强调Markdown中的文本
-      smart_enable: all
-  ##[Caret, Mark & Tilde]
-  # 插入符号、标记和波浪形扩展
-  - pymdownx.caret
-  - pymdownx.mark
-  - pymdownx.tilde
-  ##[Critic]
-  - pymdownx.critic: # 突出显示文档中添加、删除或更新的部分
-      mode: view
-  ##[Details]
-  - pymdownx.details # 可展开详细说明
-  ##[Emoji]
-  - pymdownx.emoji: # Emoji扩展-图标/表情符号等
-      emoji_index: !!python/name:material.extensions.emoji.twemoji
-      emoji_generator: !!python/name:material.extensions.emoji.to_svg
-  ##[Highlight]
-  - pymdownx.highlight: # 代码块高亮
-      anchor_linenums: true
-      linenums: true # 行号
-      #auto_title: true # 编程语言名称
-      line_spans: __span # 代码块的每一行都被包装在一个span中
-      pygments_lang_class: true # CSS类来标识代码块的语言
-  ##[InlineHilite]
-  - pymdownx.inlinehilite # 增加了对内联代码块语法高亮显示的支持
-  ##[Keys]
-  - pymdownx.keys # 允许键盘键和组合的呈现
-  ##[SmartSymbols]
-  - pymdownx.smartsymbols # 字符序列转换为相应的符号，例如版权符号或分数
-  ##[Snippets]
-  - pymdownx.snippets # 将任意文件中的内容嵌入文档(包括其他文档或源文件)的功能
-  ##[SuperFences]
-  - pymdownx.superfences: # 允许任意嵌套代码和内容块，包括警告、选项卡、列表和所有其他元素
-      custom_fences:
-        - name: mermaid
-          class: mermaid
-          format: !!python/name:pymdownx.superfences.fence_code_format
-  ##[Tabbed]
-  - pymdownx.tabbed:
-      alternate_style: true # 允许使用内容选项卡
-      combine_header_slug: true
-      slugify: !!python/object/apply:pymdownx.slugs.slugify
-        kwds:
-          case: lower
-  ##[Tasklist]
-  - pymdownx.tasklist:
-      custom_checkbox: true # 允许使用GitHub风味Markdown启发的任务列表，遵循相同的语法约定
-  ##[Arithmatex]
-  - pymdownx.arithmatex: # MathJax1数学公式支持
-      generic: true
-
-# [Extra Configuration-样式]
-extra_javascript:
-  - javascripts/mathjax.js
-  - javascripts/embed-pdf.js
-  - javascripts/bannerSlider.js
-  - https://polyfill.io/v3/polyfill.min.js?features=es6
-  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
-
+# [额外样式](不会前端,具体不清楚)
 extra_css:
-  - stylesheets/extra.css
+  - stylesheets/extra.css # 官方样式:Pied Piper自定义类型的警告
+#extra_javascript:
+#  - javascripts/mathjax.js
+#  - javascripts/embed-pdf.js
+#  - javascripts/bannerSlider.js
+#  - https://polyfill.io/v3/polyfill.min.js?features=es6
+#  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-# [Nav-清单]
+# Nav
+# 目录清单,主/副/文章均在此编辑,另还需补充i18n清单
 nav:
   - Home:
     - index.md
@@ -355,8 +315,5 @@ nav:
             Hugo on Ubuntu: Note/Hugo/hugo-on-ubuntu.md
         - MkDocs:
             Docker deploys MkDocs: Note/MkDocs/docker-mkdocs.md
-  - Tags:
-    - tags.md
-
-
-
+            Beautify style:
+              - Top bulletin board: Note/MkDocs/beauty-board.md

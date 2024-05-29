@@ -2,56 +2,84 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
     <url>
         <loc>http://47.113.102.164:8000/index.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/index.html"/>
         <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/index.html"/>
     </url>
     <url>
-        <loc>http://47.113.102.164:8000/tag.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <loc>http://47.113.102.164:8000/tags.html</loc>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/tag.html"/>
-        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/tag.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/tags.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/tags.html"/>
+    </url>
+    <url>
+        <loc>http://47.113.102.164:8000/Home/about.html</loc>
+        <lastmod>2024-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Home/about.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Home/about.html"/>
     </url>
     <url>
         <loc>http://47.113.102.164:8000/Note/Hugo/hugo-on-ubuntu.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Note/Hugo/hugo-on-ubuntu.html"/>
         <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Note/Hugo/hugo-on-ubuntu.html"/>
     </url>
     <url>
+        <loc>http://47.113.102.164:8000/Note/MkDocs/beauty-board.html</loc>
+        <lastmod>2024-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Note/MkDocs/beauty-board.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Note/MkDocs/beauty-board.html"/>
+    </url>
+    <url>
         <loc>http://47.113.102.164:8000/Note/MkDocs/docker-mkdocs.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Note/MkDocs/docker-mkdocs.html"/>
         <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Note/MkDocs/docker-mkdocs.html"/>
     </url>
     <url>
         <loc>http://47.113.102.164:8000/zh/index.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/index.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/index.html"/>
     </url>
     <url>
-        <loc>http://47.113.102.164:8000/zh/tag.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <loc>http://47.113.102.164:8000/zh/tags.html</loc>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
-        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/tag.html"/>
-        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/tag.html"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/tags.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/tags.html"/>
+    </url>
+    <url>
+        <loc>http://47.113.102.164:8000/zh/Home/about.html</loc>
+        <lastmod>2024-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Home/about.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Home/about.html"/>
     </url>
     <url>
         <loc>http://47.113.102.164:8000/zh/Note/Hugo/hugo-on-ubuntu.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Note/Hugo/hugo-on-ubuntu.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Note/Hugo/hugo-on-ubuntu.html"/>
     </url>
     <url>
+        <loc>http://47.113.102.164:8000/zh/Note/MkDocs/beauty-board.html</loc>
+        <lastmod>2024-05-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Note/MkDocs/beauty-board.html"/>
+        <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Note/MkDocs/beauty-board.html"/>
+    </url>
+    <url>
         <loc>http://47.113.102.164:8000/zh/Note/MkDocs/docker-mkdocs.html</loc>
-        <lastmod>2024-05-21</lastmod>
+        <lastmod>2024-05-29</lastmod>
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="http://47.113.102.164:8000/zh/Note/MkDocs/docker-mkdocs.html"/>
         <xhtml:link rel="alternate" hreflang="en" href="http://47.113.102.164:8000/Note/MkDocs/docker-mkdocs.html"/>
