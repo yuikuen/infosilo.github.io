@@ -7,6 +7,5 @@ RUN pip install mkdocs-static-i18n \
  && pip install mkdocs-git-revision-date-localized-plugin \
  && pip install mkdocs-git-committers-plugin-2 \
  && pip install mkdocs-git-authors-plugin \
- && pip install mkdocs-git-revision-date-localized-plugin \
  ## 图片缩放功能
  && pip install mkdocs-glightbox

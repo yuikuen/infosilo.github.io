@@ -10,8 +10,8 @@
 ## 通过 Docker 部署 MkDocs-Material，另外官方镜像缺少相关 Plugins，故先行重构
 
 # Test & Build
-## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.24 serve -a 0.0.0.0:8000
-## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.24 build
+## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.25 serve -a 0.0.0.0:8000
+## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.25 build
 
 # Basic Info
 site_name: Yuen's Info Silo          # 网站名字
@@ -22,8 +22,8 @@ site_description: >-                 # 项目描述
 
 # 版权信息
 copyright: >-
-  Copyright &copy; 2016 - now | 🔞 Yuen / All Rights Reserved. |
-# <a href="https://beian.miit.gov.cn/" target="_blank">莞ICP备20240508号</a>
+  Copyright &copy; 2024 - now | 🔞 Yuen / All Rights Reserved. | 
+  <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备202425834号</a>
 # 仓库信息
 edit_uri: edit/main/docs/             # 定义 URL 指向一个有效的子文件目录
 repo_name: yuikuen/infosilo.github.io # 右上角仓库名字 & 地址
@@ -66,8 +66,8 @@ theme:
   # [Language]
   language: en
   # [Icons]
-  logo: images/logo.png       # 图站Logo,左上角图 https://cdn0.iconfinder.com/data/icons/essential-pack-4/512/11-2-1024.png
-  favicon: images/favicon.png # 浏览器菜单栏上图标 https://cdn1.iconfinder.com/data/icons/gestureworks_gesture_glyphs/512/stroke_letter_y_lowercase_gestureworks.png
+  logo: assets/images/logo.png       # 图站Logo,左上角图 https://cdn0.iconfinder.com/data/icons/essential-pack-4/512/11-2-1024.png
+  favicon: assets/images/favicon.png # 浏览器菜单栏上图标 https://cdn1.iconfinder.com/data/icons/gestureworks_gesture_glyphs/512/stroke_letter_y_lowercase_gestureworks.png
   icon:
     previous: fontawesome/solid/angles-left # 页脚导航:上一页
     next: fontawesome/solid/angles-right    # 页脚导航:下一页
@@ -124,29 +124,13 @@ plugins:
   #- exclude-search:
   #    exclude:
   #      - dir/*
+  #- git-authors
   - offline # 离线插件
   #- social # 社交插件,开启后无法运行,暂未知
   #- blog   # 博客插件
   #- rss    # 订阅插件
   #- tags   # 标签插件
   
-  # 每篇文章底部显示
-  # 需：pip install mkdocs-git-revision-date-localized-plugin
-  - git-revision-date-localized: # 文章底部显示创建/更新时间
-      enabled: !ENV [CI, false]  # 关闭
-      type: iso_date
-      enable_creation_date: true
-      fallback_to_build_date: true
-      exclude:                   # 排除以下文章
-        - index.md
-  # 需：pip install mkdocs-git-committers-plugin-2
-  - git-committers:              # 呈现贡献者的GitHub头像
-      enabled: !ENV [CI, false]  # 关闭
-      repository: yuikuen/infosilo.github.io
-      branch: main
-      exclude:                   # 排除以下文章
-        - index.md
-
   # 多语言翻译插件 https://github.com/ultrabug/mkdocs-static-i18n
   # 需：pip install mkdocs-static-i18n
   # 通过文件后缀识别,如filename.zh.md/filename.en.md;另外官方作者建议通过目录来区分，如en/zh
@@ -166,13 +150,32 @@ plugins:
           nav_translations: # 注意,导航栏中所有需翻译的标题和副标都可放这里,但不能缩进
             Home: 首页
             About: 关于
-            Note: 笔记
-            Tags: 标签
-            # 参考例子
-            Web Site: 网站
-            Hugo on Ubuntu: Ubuntu 部署 Hugo
-            Docker deploys MkDocs: 使用 Docker 部署 MkDocs
-            Beautify style: 美化样式
+            Notes: 笔记
+            Tools: 工具
+            Giscus: 留言
+            # 参考例子,仅菜单栏翻译
+            #Web Site: 网站
+            #Hugo on Ubuntu: Ubuntu 部署 Hugo
+            #Docker deploys MkDocs: 使用 Docker 部署 MkDocs
+            #Beautify style: 美化样式 
+  # !!git相关插件需要放在i18n下面,不然会报错无法serve!!
+  # 每篇文章底部显示
+  # 需：pip install mkdocs-git-revision-date-localized-plugin
+  - git-revision-date-localized: # 文章底部显示创建/更新时间
+      enabled: true
+      type: iso_date
+      enable_creation_date: true
+      fallback_to_build_date: true
+      exclude:                   # 排除以下文章
+        - index.md
+   
+  # 需：pip install mkdocs-git-committers-plugin-2 并通过 GitHub Actions 方式提交
+  #- git-committers:              # 呈现贡献者的GitHub头像
+  #    enabled: true              # 关闭 !ENV [CI, false]
+  #    repository: yuikuen/infosilo.github.io
+  #    branch: main
+  #    exclude:                   # 排除以下文章
+  #      - index.md
 
 # Extensions
 # 主要是 MD 文章的相关 Py 渲染功能(具体参考官网)
@@ -260,13 +263,13 @@ extra:
             using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
           # using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
   # [Cookie-同意解决方案]
-  consent:
-    title: Cookie consent
-    description: >- 
-      We use cookies to recognize your repeated visits and preferences, as well
-      as to measure the effectiveness of our documentation and whether users
-      find what they're searching for. With your consent, you're helping us to
-      make our documentation better.
+  #consent:
+  #  title: Cookie consent
+  #  description: >- 
+  #    We use cookies to recognize your repeated visits and preferences, as well
+  #    as to measure the effectiveness of our documentation and whether users
+  #    find what they're searching for. With your consent, you're helping us to
+  #    make our documentation better.
   tags:
     HTML5: html
     JavaScript: js
@@ -288,32 +291,37 @@ extra:
       link: https://twitter.com/YuikuenY
       name: X-Twitter
     - icon: fontawesome/brands/weixin
-      link: img/WeChat.jpg
+      link: assets/images/WeChat.jpg
     - icon: fontawesome/brands/qq
-      link: img/QQ.jpg
+      link: assets/images/QQ.jpg
       name: QQ
 
 # [额外样式](不会前端,具体不清楚)
 extra_css:
-  - stylesheets/extra.css # 官方样式:Pied Piper自定义类型的警告
-#extra_javascript:
-#  - javascripts/mathjax.js
-#  - javascripts/embed-pdf.js
-#  - javascripts/bannerSlider.js
-#  - https://polyfill.io/v3/polyfill.min.js?features=es6
-#  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+  - assets/stylesheets/extra.css # 官方样式:Pied Piper自定义类型的警告
+extra_javascript:
+  - assets/javascripts/mathjax.js # 公式
+  #- assets/javascripts/embed-pdf.js
+  - https://polyfill.io/v3/polyfill.min.js?features=es6
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
 # Nav
 # 目录清单,主/副/文章均在此编辑,另还需补充i18n清单
 nav:
   - Home:
     - index.md
-    - About: Home/about.md
-  - Note:
+    - About: home/about.md
+  - Notes:
     - Web Site:
         - Hugo:
-            Hugo on Ubuntu: Note/Hugo/hugo-on-ubuntu.md
+            Hugo on Ubuntu: notes/Hugo/hugo-on-ubuntu.md
         - MkDocs:
-            Docker deploys MkDocs: Note/MkDocs/docker-mkdocs.md
+            Docker deploys MkDocs: notes/MkDocs/docker-mkdocs.md
             Beautify style:
-              - Top bulletin board: Note/MkDocs/beauty-board.md
+              - Top bulletin board: notes/MkDocs/beauty-board.md
+              - Comment System: notes/MkDocs/comment-system.md
+  - Tools:
+    - VMware:
+      - VMware Free: tools/VMware/vmware-free.md
+  - Giscus:
+    - giscus.md

@@ -1,5 +1,4 @@
 
-
 # GitHub
 
 ![GitHub repo size](https://img.shields.io/github/repo-size/yuikuen/infosilo.github.io)
@@ -8,11 +7,10 @@
 ![GitHub watchers](https://img.shields.io/github/watchers/yuikuen/infosilo.github.io?style=social)
 
 !!! Bug
-    ![website](images/debug.png)
+    ![website](assets/images/debug.png)
 
 
-
-## Hello
+## Navigation
 
 <div class="grid cards" markdown>
 
