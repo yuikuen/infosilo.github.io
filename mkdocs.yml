@@ -313,13 +313,17 @@ nav:
     - About: home/about.md
   - Notes:
     - Web Site:
+        - Docker:
+            Deploy Reg Server: notes/Docker/deploy-private-registry-server.md
         - Hugo:
             Hugo on Ubuntu: notes/Hugo/hugo-on-ubuntu.md
         - MkDocs:
-            Docker deploys MkDocs: notes/MkDocs/docker-mkdocs.md
+            Docker deploy MkDocs: notes/MkDocs/docker-mkdocs.md
             Beautify style:
               - Top bulletin board: notes/MkDocs/beauty-board.md
               - Comment System: notes/MkDocs/comment-system.md
+        - Work:
+            Find DingTalk Group ID: notes/Work/find-ding-group-id.md
   - Tools:
     - VMware:
       - VMware Free: tools/VMware/vmware-free.md
