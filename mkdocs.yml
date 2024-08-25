@@ -103,8 +103,8 @@ theme:
     # 页脚
     - navigation.footer           # 底部导航栏
     # 代码
-    - content.action.edit         # 支持代码编译
-    - content.action.view         # 支持代码查看
+    #- content.action.edit         # 支持代码编译
+    #- content.action.view         # 支持代码查看
     - content.tabs.link           # 多标签链接
     - content.code.copy           # 代码码内容复制
     - content.code.select         # 特定行突出显示
@@ -315,15 +315,23 @@ nav:
         Deploy ChatGPT-Next-Web: notes/Ai/deploy-chatgpt-next-web.md
     - Docker:
         Deploy Reg Server: notes/Docker/deploy-private-registry-server.md
+        Ubuntu Install Docker: notes/Docker/ubuntu-install-docker.md
     - Hugo:
         Hugo on Ubuntu: notes/Hugo/hugo-on-ubuntu.md
     - MkDocs:
         Docker deploy MkDocs: notes/MkDocs/docker-mkdocs.md
         Beautify style:
-          - Top bulletin board: notes/MkDocs/beauty-board.md
           - Comment System: notes/MkDocs/comment-system.md
+          - Top bulletin board: notes/MkDocs/beauty-board.md
     - Project:
-        Build Office Site: notes/Project/build-office-site.md
+        Build Office Site: notes/Project/build-private-servers.md
+    - PVE:
+        PVE Fake Death Handing: notes/PVE/pve-fake-death-handing.md
+        PVE 8.x Modify Source files: notes/PVE/pve-8.x-modify-source-files.md
+        PVE 8.x Remove SubScription: notes/PVE/pve-8.x-remove-subscription.md
+    - WireGuard:
+        Deploy Wg-Easy: notes/WireGuard/deploy-wg-easy.md
+        Deploy Wg on CentOS7: notes/WireGuard/deploy-wg-on-centos7.md
   - Tools:
     - VMware:
       - VMware Free: tools/VMware/vmware-free.md

@@ -1,5 +1,3 @@
-# Top Bulletin Board
-
 !!! info "Reference Links"
 
     添加顶部公告栏：https://wcowin.work/blog/websitebeauty/header.html
