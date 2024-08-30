@@ -86,7 +86,7 @@ theme:
     - navigation.tabs             # 顶部菜单(顶级索引被作为Tab)
     - navigation.tabs.sticky      # 顶部菜单始终可见(Tab滚动始终可见)
     - navigation.sections         # 侧边栏中以组的形式呈现
-    - navigation.expand           # 侧边栏展开,默认展开导航栏
+    - navigation.without          # 侧边栏展开,默认展开导航栏
     - navigation.path             # 页面标题上方呈现具体导航路径
     #- navigation.prune           # 仅显示只构建导航树的可见部分
     - navigation.indexes          # 启用节索引页后,可以将文档直接附加到节
@@ -147,6 +147,7 @@ plugins:
             Home: 首页
             About: 关于
             Notes: 笔记
+            System: 系统
             Tools: 工具
             Works: 工作
             Giscus: 留言
@@ -329,10 +330,35 @@ nav:
         PVE Fake Death Handing: notes/PVE/pve-fake-death-handing.md
         PVE 8.x Modify Source files: notes/PVE/pve-8.x-modify-source-files.md
         PVE 8.x Remove SubScription: notes/PVE/pve-8.x-remove-subscription.md
+    - RPi:
+      - Deploy Ubuntu On RPi: notes/RPi/deploy-ubuntu-on-rpi.md
+    - Tomcat:
+      - Deploy Tomcat: notes/Tomcat/deploy-tomcat.md
+      - Deploy Tomcat on Docker: notes/Tomcat/deploy-tomcat-on-docker.md
+    - Vsftpd:
+        Deploy VsFtpd: notes/Vsftpd/deploy-vsftpd.md
     - WireGuard:
         Deploy Wg-Easy: notes/WireGuard/deploy-wg-easy.md
         Deploy Wg on CentOS7: notes/WireGuard/deploy-wg-on-centos7.md
+  - System:
+    - Arch:
+      - Install ArchLinux: system/Arch/install-archlinux.md
+    - Linux:
+      - Cannot Modify SSH Port: system/Linux/cannot-modify-ssh-port.md
+    - Windows:
+      - Laptop Battery Status: system/Windows/laptop-battery-status.md
+      - New Laptop Win11 Skips Internet Activation: system/Windows/new-laptop-win11-skips-internet-activation.md
+      - Security Policies Prevent Guest Access: system/Windows/security-policies-prevent-guest-access.md
+      - Windows Home-Editiion Open gpedit: system/Windows/win-home-edition-open-gpedit.md
   - Tools:
+    - Chrome:
+      - Chrome Enable Parallel Downloading: tools/Chrome/chrome-enable-parallel-downloading.md
+      - Chrome Solve Err_Cert_Invalid: tools/Chrome/chrome-solve-err_cert_invalid.md
+      - Chrome Solve Neterr_Cert_Authority_Invalid: tools/Chrome/chrome-solve-neterr_cert_authority_invalid.md
+    - Laptop:
+      - Battle X 2023 Recore Display Memory: tools/Laptop/battle-x-2023-recore-display-memory.md
+    - Security:
+      - HuoRong Manslaughter Explorer: tools/Security/huorong-manslaughter-explorer.md
     - VMware:
       - VMware Free: tools/VMware/vmware-free.md
   - Works:

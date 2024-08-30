@@ -132,7 +132,7 @@ $ sudo docker --version
 $ cat >> /etc/docker/daemon.json << EOF
 {
     "registry-mirrors": [
-        "https://reg.xxxxxxxx.tech"
+        "https://reg.xxxxxxxx.tech",
         "https://eihzr0te.mirror.aliyuncs.com",
         "https://dockerhub.mirrors.nwafu.edu.cn/",
         "https://mirror.ccs.tencentyun.com",

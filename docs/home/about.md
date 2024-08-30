@@ -1,3 +1,10 @@
+
+!!! Info "Site Project"
+    ![GitHub repo size](https://img.shields.io/github/repo-size/yuikuen/infosilo.github.io)
+    ![GitHub stars](https://img.shields.io/github/stars/yuikuen/infosilo.github.io)
+    ![GitHub forks](https://img.shields.io/github/forks/yuikuen/infosilo.github.io?style=social)
+    ![GitHub watchers](https://img.shields.io/github/watchers/yuikuen/infosilo.github.io?style=social)
+
 <div class="grid" style="display: grid;grid-template-columns: 30% 69%" markdown>
 
 <div class="grid cards" markdown>
@@ -30,9 +37,11 @@
 
     :material-eye-check:{ .lg .middle } [Yuen's Info Silo](http://17121203.xyz/)
 
-    :material-numeric-1-box:{ .lg .middle } [111](111) - 1111
+    :material-numeric-1-box:{ .lg .middle } [Build Private Servers](../notes/Project/build-private-servers.md) - 搭建私人服务器
 
-    :material-numeric-2-box:{ .lg .middle } [222](222) - 2222
+    :material-numeric-2-box:{ .lg .middle } [Deploy ChatGPT-Web](../notes/Ai/deploy-chatgpt-web.md) - 部署 ChatGPT-Web
+
+    :material-numeric-3-box:{ .lg .middle } [Deploy ChatGPT-Next-Web](../notes/Ai/deploy-chatgpt-next-web.md) - 部署 ChatGPT-Next-Web
 
 <div class="grid cards" style="display:grid; grid-template-columns: 49% 49% !important;" markdown>
 
