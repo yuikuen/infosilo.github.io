@@ -856,7 +856,7 @@ timestamp="$(date +'%Y-%m-%d %H:%M:%S')"
 cd $path
 
 # 执行构建命令
-if docker run --rm -it --name docs -v ${PWD}:/docs yuikuen/mkdocs-material:9.5.25 build; then
+if docker run --rm --name docs -v ${PWD}:/docs yuikuen/mkdocs-material:9.5.25 build; then
     # 如果执行成功，则输出结果到日志文件，并添加时间戳
     echo "$timestamp - ok" >> $log_file
 
