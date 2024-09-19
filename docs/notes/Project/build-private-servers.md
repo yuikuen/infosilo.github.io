@@ -880,7 +880,6 @@ $ crontab -e
 0 0 * * * /bin/bash /opt/app/shell/build-push.sh >> /dev/null 2>&1
 ```
 
-
 ## 六. EasyImage
 
 > ECS/VPS 自建图床服务，Typora/Vs Code + PicGo 作上传使用
