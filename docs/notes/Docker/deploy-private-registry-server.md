@@ -19,7 +19,7 @@ $ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
 
 # 参考 GitHub 地址查找最新版本号
-# GitHub：https://github.com/docker/compose/releases/latest
+# GitHub：<https://github.com/docker/compose/releases/latest>
 $ curl -L "https://github.com/docker/compose/releases/download/v2.28.1/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 $ chmod +x /usr/local/bin/docker-compose
 $ docker-compose -v

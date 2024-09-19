@@ -72,6 +72,7 @@ Warning: The system is configured to read the RTC time in the local time zone.
 ### 1.3 验证方式
 
 > 基于安全考虑，采用 RSA 密钥验证并关闭密码认证
+> 
 > PS：为了实现统一管理，都由私人笔电作为 Master 生成密钥，再将公钥发至不同 VPS
 
 ```sh
@@ -583,6 +584,15 @@ $ crontab -l
 0 3 * * * rclone sync -v /opt/app onedrive:/ECS_BAK/ --transfers=1 >> /root/.config/rclone/rclone.log 2>&1
 ```
 
+```sh
+$ cat rclone.log | tail -n 6
+2024/09/15 03:02:17 INFO  : 
+Transferred:       19.977 MiB / 19.977 MiB, 100%, 142.549 KiB/s, ETA 0s
+Checks:               618 / 618, 100%
+Transferred:           84 / 84, 100%
+Elapsed time:      2m15.5s
+```
+
 ## 四. CertBot
 
 > 通过 `Docker + CertBot` 安装 `Aliyun Cli` 工具，实现 SSL 泛域名自动续期
@@ -828,6 +838,49 @@ server {
 }
 ```
 
+### 5.3 Build & Push
+
+创建定时构建 & 推送脚本和任务
+
+```sh
+#!/bin/bash
+
+# 定义路径变量
+path="/opt/app/infosilo.github.io"
+log_file="/var/log/web.log"
+
+# 定义时间戳变量
+timestamp="$(date +'%Y-%m-%d %H:%M:%S')"
+
+# 进入指定路径
+cd $path
+
+# 执行构建命令
+if docker run --rm -it --name docs -v ${PWD}:/docs yuikuen/mkdocs-material:9.5.25 build; then
+    # 如果执行成功，则输出结果到日志文件，并添加时间戳
+    echo "$timestamp - ok" >> $log_file
+
+    # 添加所有文件到Git
+    git add .
+
+    # 提交更改
+    git commit -m "update on $timestamp"
+
+    # 推送到远程仓库
+    git push -u origin main
+else
+    # 如果执行失败，则输出结果到日志文件，并添加时间戳
+    echo "$timestamp - no" >> $log_file
+fi
+```
+
+```sh
+$ crontab -e
+# 每天凌晨0点执行build&push操作
+0 0 * * * /bin/bash /opt/app/shell/build-push.sh >> /dev/null 2>&1
+```
+
+
 ## 六. EasyImage
 
 > ECS/VPS 自建图床服务，Typora/Vs Code + PicGo 作上传使用
@@ -888,9 +941,9 @@ server {
 
 ### 6.3 Install Nodejs
 
-> NodeJs DownLoad：http://nodejs.cn/download/
+> NodeJs DownLoad：<http://nodejs.cn/download>
 
-1、双击 .exe 文件安装，然后自定义路径，如 `D:\Tools\Nodejs`（根据个人安装路径习惯存放）
+1、双击 `.exe` 文件安装，然后自定义路径，如 `D:\Tools\Nodejs`（根据个人安装路径习惯存放）
 
 2、在安装路径的根目录下新建两个文件夹，`node_cache` & `node_global`
 
@@ -898,11 +951,11 @@ server {
 
 - 电脑 -> 属性 -> 系统 -> 系统信息 -> 高级系统设置 -> 高级 -> 环境变量
 
-- 在**系统变量**里新建一个 `NODE_HOME`，变量值为安装路径：`D:\Tools\Nodejs`
+- 在 **系统变量** 里新建一个 `NODE_HOME`，变量值为安装路径：`D:\Tools\Nodejs`
 
-- 然后再在**系统变量**的【path】中添加三个参数：
+- 然后再在 **系统变量** 的【path】中添加三个参数：
 
-  %NODE_HOME%、%NODE_HOME%\node_global、%NODE_HOME%\node_cache
+  `%NODE_HOME%`、`%NODE_HOME%\node_global`、`%NODE_HOME%\node_cache`
 
 - 之后将用户变量默认的`C:\Users\$username\AppData\Roaming\npm` 改成 `D:\Tools\Nodejs\node_global`
 
@@ -925,7 +978,7 @@ server {
   npm config set registry https://registry.npmmirror.com
   ```
 
-  注：https://registry.npm.taobao.org/ 已废弃
+  注：<https://registry.npm.taobao.org> 已废弃
 
 - 检查配置是否成功
 
@@ -935,7 +988,7 @@ server {
 
 ### 6.4 Install PicGo
 
-> PicGo DownLoad：https://github.com/Molunerfinn/PicGo/releases
+> PicGo DownLoad：<https://github.com/Molunerfinn/PicGo/releases>
 
 1、双击 .exe 文件安装，然后在插件设置中搜索 `web-upload`，选择 `web-uploader 1.1.1` 安装
 
@@ -945,7 +998,7 @@ server {
 
 ```sh
 图床配置名：// 自定义
-API地址：https://img.17121203.xyz // 网站API地址
+API地址：<https://img.17121203.xyz> // 网站API地址
 POST参数名：image
 JSON路径：url
 自定义请求头：// 不填写

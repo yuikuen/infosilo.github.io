@@ -7,11 +7,11 @@
 
 -   :material-server: __Server__ for Build
 
-    [:octicons-arrow-right-24: Getting started](notes/Project/build-private-servers.html)
+    [:octicons-arrow-right-24: Getting started](notes/Project/build-private-servers.md)
 
 -   :material-notebook-multiple: __GPT-AI__ for Learning and Deployment
 
-    [:octicons-arrow-right-24: Reference](notes/Ai/deploy-chatgpt-next-web.html)
+    [:octicons-arrow-right-24: Reference](notes/Ai/deploy-chatgpt-next-web.md)
 
 </div>
 

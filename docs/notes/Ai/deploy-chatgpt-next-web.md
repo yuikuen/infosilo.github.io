@@ -9,7 +9,7 @@
 
 ## 一. 服务部署
 
-- OpenAPI-Key 获取，自行登录 https://platform.openai.com 获取
+- OpenAPI-Key 获取，自行登录 <https://platform.openai.com> 获取
 - ChatGPT-Next-Web 部署并容器服务仅暴露内部服务端口
 
 示例1：单应用场景

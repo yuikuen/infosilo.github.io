@@ -134,3 +134,37 @@ $ sudo apt upgrade
 ```
 
 配置 & 更新完后，即为完成安装并且已经可使用了
+
+## 四. 安全配置
+
+> 作为服务器，基于安全考虑，采用 RSA 密钥验证并关闭密码认证（非必要）
+> 
+> PS：为了实现统一管理，都由私人笔电作为 Master 生成密钥，再将公钥发至 RPi
+
+```sh
+# 私人笔电操作
+$ ssh-keygen -t rsa -b 4096 -C "example@mail.com"
+$ ssh-copy-id -i ~/.ssh/id_rsa.pub -p 22 yuen@rpi_ip
+$ ssh -p 22 yuen@rpi_ip
+```
+
+注意：此时登录还是采用密码验证方式，现还需要注释掉 `sshd_config` 的密码验证
+
+```sh
+$ vim /etc/ssh/sshd_config
+# 修改端口、关闭密码验证、开启密钥验证、关闭 root 远登
+Port 12123
+PermitRootLogin no
+PasswordAuthentication no
+PubkeyAuthentication yes
+AllowUsers yuen
+$ systemctl restart sshd
+```
+
+!!! Bug "注意事项"
+    RPi PasswordAuthentication 需要修改 50-cloud-init.conf
+
+```sh
+$ sed -i "s/yes/no/g" /etc/ssh/sshd_config.d/50-cloud-init.conf
+$ systemctl restart ssh;systemctl status ssh
+```
