@@ -348,6 +348,8 @@ nav:
       - Install ArchLinux: system/Arch/install-archlinux.md
     - Linux:
       - Cannot Modify SSH Port: system/Linux/cannot-modify-ssh-port.md
+    - Ubuntu:
+      - Ubuntu 24 Changes Source: system/Ubuntu/ubuntu24-changes-source.md
     - Windows:
       - Laptop Battery Status: system/Windows/laptop-battery-status.md
       - New Laptop Win11 Skips Internet Activation: system/Windows/new-laptop-win11-skips-internet-activation.md
