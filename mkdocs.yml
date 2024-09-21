@@ -317,7 +317,7 @@ nav:
         - Deploy Tachidesk: notes/Comic/deploy-tachidesk.md
     - Docker:
         - Deploy Reg Server: notes/Docker/deploy-private-registry-server.md
-        - Ubuntu Install Docker: notes/Docker/ubuntu-install-docker.md
+        - Install Docker On Ubuntu: notes/Docker/install-docker-on-ubuntu.md
     - GitLab:
         - Deploy GitLab On Docker: notes/GitLab/deploy-gitlab15-on-compose.md
     - Hugo:
