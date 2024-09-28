@@ -25,7 +25,7 @@ copyright: >-
 theme:
   name: material
   custom_dir: overrides
-  logo: assets/images/logo.png
+  logo: assets/images/Devops.png
   favicon: assets/images/favicon.png
   # 可自行替换默认图标
   icon:
