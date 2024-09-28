@@ -1,42 +1,43 @@
-# Build Declarations
-## 网站构建使用的 MkDocs 作为框架，另外自定义样式参考于 Eureka! & Wcowin's Web 
-## Material for MkDocs https://squidfunk.github.io/mkdocs-material/setup/
-## Eureka! http://www.cuishuaiwen.com:8000
-## Wcowin's Web https://wcowin.work
-
-# Build Methods
-## 通过 Docker 部署 MkDocs-Material，另外官方镜像缺少相关 Plugins，故先行重构
-
-# Test & Build
+# Build Methods（构建方法）
+## 使用 MkDocs-Material 官方镜像安装 Plugins，再通过 Docker 构建部署
+# Test & Build（测试&构建）
 ## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.25 serve -a 0.0.0.0:8000
 ## docker run --rm -it --name docs -v ${PWD}:/docs -p 8000:8000 yuikuen/mkdocs-material:9.5.25 build
 
-# Basic Info
-site_name: Yuen's Info Silo          # 网站名字
-site_url: https://www.17121203.xyz   # 网站地址
-site_author: Mr.Yuen                 # 作者名字
-site_description: >-                 # 项目描述
+# Site Info（站点信息）
+site_name: Yc's Info_Silo
+site_url: https://www.17121203.xyz
+site_author: Mr.Yuen
+site_description: >-
   mó dāo bú wù kǎn chái gōng
 
-# 版权信息
-copyright: >-
-  Copyright &copy; 2024 - now | 🔞 Yuen / All Rights Reserved. | 
-  <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备202425834号</a>
-# 仓库信息
-edit_uri: edit/main/docs/             # 定义 URL 指向一个有效的子文件目录
-repo_name: yuikuen/infosilo.github.io # 右上角仓库名字 & 地址
+# Repo Info（仓库信息）
+edit_uri: edit/main/docs/
+repo_name: yuikuen/infosilo.github.io
 repo_url: https://github.com/yuikuen/infosilo.github.io.git
 
-# Theme Styles
-## 参考 https://squidfunk.github.io/mkdocs-material/setup
+# Copyright（版权声明）
+copyright: >-
+  Copyright &copy; 2024 - now | 🔞 Yuen / All Rights Reserved. |
+  <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备202425834号</a> 
+
+# Theme Styles（主题样式）
 theme:
-  name: material        # 主题名称
-  custom_dir: overrides # 主题自定义目录(会覆盖官方默认样式)
-  # [Colors]
+  name: material
+  custom_dir: overrides
+  logo: assets/images/logo.png
+  favicon: assets/images/favicon.png
+  # 可自行替换默认图标
+  icon:
+    previous: fontawesome/solid/angles-left # 页脚导航:上一页
+    next: fontawesome/solid/angles-right    # 页脚导航:下一页
+    edit: material/pencil                   # 文章编辑图标
+    view: material/eye                      # 文章查看图标
+    repo: fontawesome/brands/github         # 右上角GitHub图标
+    admonition:                             # 警告标签自定义
+      ai: simple/openai
+      example: material/hexagon-multiple
   palette:
-    #primary: light blue
-    #accent: light green
-    # 日夜切换
     - media: "(prefers-color-scheme)"
       toggle:
         icon: material/brightness-auto # 自动图标
@@ -55,56 +56,34 @@ theme:
       toggle:
         icon: material/brightness-4
         name: Switch to system preference
-  # [Font]
+  language: en           # 默认语言
   font:
-    text: Roboto
-    code: Roboto Mono
-  # [Language]
-  language: en
-  # [Icons]
-  logo: assets/images/logo.png       # 图站Logo,左上角图 https://cdn0.iconfinder.com/data/icons/essential-pack-4/512/11-2-1024.png
-  favicon: assets/images/favicon.png # 浏览器菜单栏上图标 https://cdn1.iconfinder.com/data/icons/gestureworks_gesture_glyphs/512/stroke_letter_y_lowercase_gestureworks.png
-  icon:
-    previous: fontawesome/solid/angles-left # 页脚导航:上一页
-    next: fontawesome/solid/angles-right    # 页脚导航:下一页
-    edit: material/pencil                   # 文章编辑图标
-    view: material/eye                      # 文章查看图标
-    repo: fontawesome/brands/github         # 右上角GitHub图标
-    tag:                                    # 自定义标签
-      html: fontawesome/brands/html5
-      js: fontawesome/brands/js
-      css:  fontawesome/brands/css3
-    admonition:
-      tip: fontawesome/solid/bullhorn       # 自定义警告标志
-  # [Features]
+    text: Roboto         # 文本字体
+    code: JetBrains Mono # 代码字体
   features:
     # 导航
-    #- navigation.instant         # 瞬间加载(多语言切换会导致跳回首页)
-    - navigation.instant.prefetch # 预先加载
-    - navigation.instant.progress # 进度显示
-    - navigation.tracking         # 锚点跟踪(地址栏中的URL会自动更新为目录中突出显示的活动锚点)
     - navigation.tabs             # 顶部菜单(顶级索引被作为Tab)
     - navigation.tabs.sticky      # 顶部菜单始终可见(Tab滚动始终可见)
-    - navigation.sections         # 侧边栏中以组的形式呈现
-    - navigation.without          # 侧边栏展开,默认展开导航栏
+    - navigation.instant.prefetch # 预先加载
+    - navigation.instant.progress # 进度显示
+    # 菜单
+    - navigation.tracking         # 锚点跟踪(地址栏中的URL会自动更新为目录中突出显示的活动锚点)
+   #- navigation.sections         # 侧边栏中以组的形式呈现所有
+   #- navigation.without          # 侧边栏展开,默认展开导航栏
     - navigation.path             # 页面标题上方呈现具体导航路径
-    #- navigation.prune           # 仅显示只构建导航树的可见部分
     - navigation.indexes          # 启用节索引页后,可以将文档直接附加到节
     - navigation.top              # 滚动显示返回顶部按钮
     - toc.follow                  # 目录跟踪-页面右侧小目录
-    #- toc.integrate              # 目录跟踪-页面左侧大目录
-    # 搜索-需启用plugins.search插件
+    # 搜索(*plugins.search)
     - search.suggest              # 搜索建议
-    - search.highlight            # 搜索高亮显示
-    - search.share                # 搜索分享按钮
+    - search.highlight            # 高亮提醒
+    - search.share                # 分享按钮
     # 页眉
     - header.autohide             # 自动隐藏
-    - announce.dismiss            # 可点X关闭临时公告
+    - announce.dismiss            # 可点X关闭临时公告,对应overrides/main.html
     # 页脚
-    - navigation.footer           # 底部导航栏
+    - navigation.footer           # 底部导航
     # 代码
-    #- content.action.edit         # 支持代码编译
-    #- content.action.view         # 支持代码查看
     - content.tabs.link           # 多标签链接
     - content.code.copy           # 代码码内容复制
     - content.code.select         # 特定行突出显示
@@ -112,24 +91,11 @@ theme:
     - content.tooltips            # 工具提示:如链接[]()或[][]
     - content.footnote.tooltips   # 脚注呈现
 
-# Plugins
 plugins:
   - search:
-      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])' # 提高搜索索引精确度
-  # 需pip install mkdocs-exclude-search,搜索排除某文件
-  #- exclude-search:
-  #    exclude:
-  #      - dir/*
-  #- git-authors
-  - offline # 离线插件
-  #- social # 社交插件,开启后无法运行,暂未知
-  #- blog   # 博客插件
-  #- rss    # 订阅插件
-  #- tags   # 标签插件
-  
-  # 多语言翻译插件 https://github.com/ultrabug/mkdocs-static-i18n
-  # 需：pip install mkdocs-static-i18n
-  # 通过文件后缀识别,如filename.zh.md/filename.en.md;另外官方作者建议通过目录来区分，如en/zh
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - offline:
+      enabled: !ENV [OFFLINE, false]
   - i18n:
       docs_structure: suffix
       fallback_to_default: true
@@ -143,41 +109,25 @@ plugins:
         - locale: zh
           name: Chinese
           build: true
-          nav_translations: # 注意,导航栏中所有需翻译的标题和副标都可放这里,但不能缩进
+          nav_translations:
             Home: 首页
-            About: 关于
-            Notes: 笔记
+            Grammar: 语法
+            Item: 项目
+           #Network: 网络
             System: 系统
-            Tools: 工具
-            Works: 工作
+            Software: 软件
+            Fun: 乐趣
             Giscus: 留言
-            # 参考例子,仅菜单栏翻译
-            #Web Site: 网站
-            #Hugo on Ubuntu: Ubuntu 部署 Hugo
-            #Docker deploys MkDocs: 使用 Docker 部署 MkDocs
-            #Beautify style: 美化样式 
-  # !!git相关插件需要放在i18n下面,不然会报错无法serve!!
-  # 每篇文章底部显示
-  # 需：pip install mkdocs-git-revision-date-localized-plugin
-  - git-revision-date-localized: # 文章底部显示创建/更新时间
-      enabled: true
+  # git插件需要放在i18n下面,否则报错无法serve
+  - git-revision-date-localized:
+      enabled: true # 每篇文章底部显示创建/更新时间
       type: iso_date
       enable_creation_date: true
       fallback_to_build_date: true
-      exclude:                   # 排除以下文章
+      exclude: # 排除以下文章
         - index.md
-   
-  # 需：pip install mkdocs-git-committers-plugin-2 并通过 GitHub Actions 方式提交
-  #- git-committers:              # 呈现贡献者的GitHub头像
-  #    enabled: true              # 关闭 !ENV [CI, false]
-  #    repository: yuikuen/infosilo.github.io
-  #    branch: main
-  #    exclude:                   # 排除以下文章
-  #      - index.md
 
-# Extensions
-# 主要是 MD 文章的相关 Py 渲染功能(具体参考官网)
-# 参考 https://squidfunk.github.io/mkdocs-material/setup/extensions/
+# MD文章相关PY渲染功能,参考https://squidfunk.github.io/mkdocs-material/setup/extensions/
 markdown_extensions:
   - abbr
   - admonition
@@ -226,19 +176,12 @@ markdown_extensions:
   - pymdownx.arithmatex:        # MathJax1数学公式支持
       generic: true
 
-# Extra
 extra:
-  # 官方多语言切换,以目录区分;因启用i18n插件,此注释
-  #alternate:
-  #  - name: English
-  #    link: /en/
-  #  - name: Chinese
-  #    link: /zh/
-  #    lang: zh
-  # 页面状态标识符
+  # 文章状态
   status:
     new: Recently added
     deprecated: Deprecated
+    happy: Happy
   # 网站分析
   analytics:
     # [Google Analytics-谷歌分析]
@@ -256,120 +199,112 @@ extra:
         - icon: material/thumb-down-outline
           name: This page could be improved
           data: 0
-          note: >- 
+          note: >-
             Thanks for your feedback! Help us improve this page by
-            using our <a href="..." target="_blank" rel="noopener">feedback form</a>.
-          # using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
-  # [Cookie-同意解决方案]
-  #consent:
-  #  title: Cookie consent
-  #  description: >- 
-  #    We use cookies to recognize your repeated visits and preferences, as well
-  #    as to measure the effectiveness of our documentation and whether users
-  #    find what they're searching for. With your consent, you're helping us to
-  #    make our documentation better.
-  tags:
-    HTML5: html
-    JavaScript: js
-    CSS: css
+            using our <a href="https://marketingplatform.google.com/about/analytics/" target="_blank" rel="noopener">feedback form</a>.
   generator: true # 是否保留'Material for MkDocs'
-  # [Social-社交链接]
-  ## 官方图标 https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/#logo-icon-bundled
   social:
     - icon: fontawesome/brands/github
       link: https://github.com/yuikuen
       name: GitHub
-    #- icon: fontawesome/brands/gitlab
     - icon: fontawesome/brands/docker
       link: https://hub.docker.com/u/yuikuen
+      name: Docker
     - icon: fontawesome/regular/envelope
       link: mailto:<yuikuen.yuen@gmail.com>
       name: G-Email
     - icon: fontawesome/brands/x-twitter
       link: https://twitter.com/YuikuenY
       name: X-Twitter
-    - icon: fontawesome/brands/weixin
-      link: assets/images/WeChat.jpg
-    - icon: fontawesome/brands/qq
-      link: assets/images/QQ.jpg
-      name: QQ
 
-# [额外样式](不会前端,具体不清楚)
-extra_css:
-  - assets/stylesheets/extra.css # 官方样式:Pied Piper自定义类型的警告
+# 扩展插件
 extra_javascript:
-  - assets/javascripts/mathjax.js # 公式
-  #- assets/javascripts/embed-pdf.js
+  # Arithmatex
+  - assets/javascripts/mathjax.js 
+  - https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js
+  # KaTeX
+  - assets/javascripts/katex.js
+  - https://unpkg.com/katex@0/dist/katex.min.js
+  - https://unpkg.com/katex@0/dist/contrib/auto-render.min.js
+  # unkonw
   - https://polyfill.io/v3/polyfill.min.js?features=es6
   - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
 
-# Nav
-# 目录清单,主/副/文章均在此编辑,另还需补充i18n清单
+# 自定义样式
+extra_css:
+  - assets/stylesheets/extra.css
+  - https://unpkg.com/katex@0/dist/katex.min.css
+
+# 文章目录
 nav:
   - Home:
     - index.md
-    - About: home/about.md
-  - Notes:
-    - Ai:
-        - Deploy ChatGPT-Web: notes/Ai/deploy-chatgpt-web.md
-        - Deploy ChatGPT-Next-Web: notes/Ai/deploy-chatgpt-next-web.md
-    - Comic:
-        - Deploy Tachidesk: notes/Comic/deploy-tachidesk.md
-    - Docker:
-        - Deploy Reg Server: notes/Docker/deploy-private-registry-server.md
-        - Install Docker On Ubuntu: notes/Docker/install-docker-on-ubuntu.md
+  - Grammar:
+    - Bash:
+      - Auto Clean Cache: Notes/Grammar/Bash/auto-clean-cache.md
+  - Item:
+    - Notes/Item/index.md
+    - AI:
+      - Deploy ChatGPT-Web: Notes/Item/AI/deploy-chatgpt-web.md
+      - Deploy ChatGPT-Next-Web: Notes/Item/AI/deploy-chatgpt-next-web.md
+    - Container:
+      - Install Docker On Ubuntu24: Notes/Item/Container/install-docker-on-ubuntu.md
+      - Deploy Private Registry Server: Notes/Item/Container/deploy-private-registry-server.md
+      - Docker Bridge Iptables Disabled: Notes/Item/Container/docker-bridge-iptables-disabled.md
     - GitLab:
-        - Deploy GitLab On Docker: notes/GitLab/deploy-gitlab15-on-compose.md
-    - Hugo:
-        - Hugo On Ubuntu: notes/Hugo/hugo-on-ubuntu.md
+      - Deploy GitLab15 On Compose: Notes/Item/GitLab/deploy-gitlab15-on-compose.md
+    - Harbor:
+      - Deploy Harbor2.7 On Compose: Notes/Item/Harbor/deploy-harbor2.7-on-compose.md
     - Jenkins:
-        - Deploy Jenkins-Blueocean On Compose: notes/Jenkins/deploy-jenkins-blueocean-on-compose.md
+      - Deploy Jenkins-Blueocean On Compose: Notes/Item/Jenkins/deploy-jenkins-blueocean-on-compose.md
     - MkDocs:
-        - Beautify style:
-          - Top bulletin board: notes/MkDocs/beauty-board.md
-    - Project:
-        - Build Private Servers: notes/Project/build-private-servers.md
-    - PVE:
-        - PVE Fake Death Handing: notes/PVE/pve-fake-death-handing.md
-        - PVE 8.x Modify Source files: notes/PVE/pve-8.x-modify-source-files.md
-        - PVE 8.x Remove SubScription: notes/PVE/pve-8.x-remove-subscription.md
-    - RPi:
-      - Deploy Ubuntu On RPi: notes/RPi/deploy-ubuntu-on-rpi.md
+      - Beauty Board: Notes/Item/MkDocs/beauty-board.md
+    - Private:
+      - Build Private Services: Notes/Item/Private/build-private-services.md
     - Tomcat:
-      - Deploy Tomcat: notes/Tomcat/deploy-tomcat.md
-      - Deploy Tomcat On Docker: notes/Tomcat/deploy-tomcat-on-docker.md
-    - Vsftpd:
-        - Deploy VsFtpd: notes/Vsftpd/deploy-vsftpd.md
+      - Deploy Tomcat: Notes/Item/Tomcat/deploy-tomcat.md
+      - Deploy Tomcat On Docker: Notes/Item/Tomcat/deploy-tomcat-on-docker.md
+    - VsFtpd:
+      - Deploy VsFtpd: Notes/Item/VsFtpd/deploy-vsftpd.md
     - WireGuard:
-        - Deploy Wg-Easy: notes/WireGuard/deploy-wg-easy.md
-        - Deploy Wg On CentOS7: notes/WireGuard/deploy-wg-on-centos7.md
+      - Deploy WG-Easy: Notes/Item/WireGuard/deploy-wg-easy.md
+      - Deploy WG On CentOS7: Notes/Item/WireGuard/deploy-wg-on-centos7.md
   - System:
-    - Arch:
-      - Install ArchLinux: system/Arch/install-archlinux.md
-    - Linux:
-      - Cannot Modify SSH Port: system/Linux/cannot-modify-ssh-port.md
-    - Ubuntu:
-      - Ubuntu 24 Changes Source: system/Ubuntu/ubuntu24-changes-source.md
-    - Windows:
-      - Laptop Battery Status: system/Windows/laptop-battery-status.md
-      - New Laptop Win11 Skips Internet Activation: system/Windows/new-laptop-win11-skips-internet-activation.md
-      - Security Policies Prevent Guest Access: system/Windows/security-policies-prevent-guest-access.md
-      - Windows Home-Editiion Open gpedit: system/Windows/win-home-edition-open-gpedit.md
-  - Tools:
+    - Notes/System/index.md
+    - ARM-RPI:
+      - Deploy Ubuntu-Server On RPI: Notes/System/ARM-RPI/deploy-ubuntu-server-on-rpi.md
+    - GNU-Arch:
+      - Install ArchLinux: Notes/System/GNU-Arch/install-archlinux.md
+    - GNU-PVE:
+      - PVE Hardware Info: Notes/System/GNU-PVE/pve-hardware-info.md
+      - PVE Fake Death Handing: Notes/System/GNU-PVE/pve-fake-death-handing.md
+      - PVE8.x Changes Source: Notes/System/GNU-PVE/pve8.x-changes-source.md
+      - PVE8.x Remove Subscription: Notes/System/GNU-PVE/pve8.x-remove-subscription.md
+    - GNU-Rocky:
+      - Rocky9 Changes Source: Notes/System/GNU-Rocky/rocky9-changes-source.md
+    - GNU-Ubuntu:
+      - Ubuntu24 Changes Source: Notes/System/GNU-Ubuntu/ubuntu24-changes-source.md
+    - MS-Win:
+      - Security Policies Prevent Guest Access: Notes/System/MS-Win/security-policies-prevent-guest-access.md
+      - Home Edition Open Gpedit: Notes/System/MS-Win/home-edition-open-gpedit.md
+  - Software:
+    - Notes/Software/index.md
     - Chrome:
-      - Chrome Enable Parallel Downloading: tools/Chrome/chrome-enable-parallel-downloading.md
-      - Chrome Solve Err_Cert_Invalid: tools/Chrome/chrome-solve-err_cert_invalid.md
-      - Chrome Solve Neterr_Cert_Authority_Invalid: tools/Chrome/chrome-solve-neterr_cert_authority_invalid.md
-    - Laptop:
-      - Battle X 2023 Recore Display Memory: tools/Laptop/battle-x-2023-recore-display-memory.md
-    - Nas:
-      - Deploy Vaultwarden On Qnap: tools/Nas/deploy-vaultwarden-on-qnap.md
+      - Enable Parallel Downloading: Notes/Software/Chrome/enable-parallel-downloading.md
+      - Solve Err_Cert_Invalid: Notes/Software/Chrome/solve-err_cert_invalid.md
+      - Solve Neterr_Cert_Authority_Invalid: Notes/Software/Chrome/solve-neterr_cert_authority_invalid.md
+    - Nas-Qnap:
+      - Deploy VaultWarden On Qnap: Notes/Software/Nas-Qnap/deploy-vaultwarden-on-qnap.md
+    - NoteBook:
+      - EliteBook Recore Display Memory: Notes/Software/NoteBook/elitebook-recore-display-memory.md
+      - NoteBook Battery Status: Notes/Software/NoteBook/notebook-battery-status.md
+      - NoteBook Skips Internet Activation(Win11): Notes/Software/NoteBook/notebook-skips-internet-activation-win11.md
     - Security:
-      - HuoRong Manslaughter Explorer: tools/Security/huorong-manslaughter-explorer.md
+      - HuoRong Manslaughter Explorer: Notes/Software/Security/huorong-manslaughter-explorer.md
     - VMware:
-      - VMware Free: tools/VMware/vmware-free.md
-  - Works:
-    - DingTalk:
-      - Find DingTalk Group ID: work/find-ding-group-id.md
+      - WMware Pro Free: Notes/Software/VMware/vmware-pro-free.md
+  - Fun:
+    - Comic:
+      - Deploy Tachidesk: Notes/Fun/Comic/deploy-tachidesk.md
   - Giscus:
     - giscus.md

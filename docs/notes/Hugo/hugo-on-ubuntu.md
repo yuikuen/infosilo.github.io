@@ -1,1 +1,0 @@
-# Hugo on Ubuntu
