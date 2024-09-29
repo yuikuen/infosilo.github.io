@@ -85,7 +85,10 @@ $ sudo tee /etc/docker/daemon.json <<-'EOF'
 {
     "registry-mirrors": [
         "https://eihzr0te.mirror.aliyuncs.com",
-        "https://reg.xxxxxxxx.tech"
+        "https://reg.xxxxxxxx.tech",
+        "https://dockerpull.com",
+        "https://docker.anyhub.us.kg",
+        "https://dockerhub.jobcher.com"
     ],
     "max-concurrent-downloads": 10,
     "max-concurrent-uploads": 5,

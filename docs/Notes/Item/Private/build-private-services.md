@@ -1006,6 +1006,10 @@ JSON路径：url
 
 PS：详细参数查看 EasyImage 中的 API 设置，另外记得开启 **图床安全** 的 **API 上传** 功能，最后在 PicGo 上传一张图片，并在 EasyImage 中查看是否有此图片；
 
+202409 另外可以直接使用 [easyimage 插件](https://github.com/wjf2016/picgo-plugin-easyimage)，安装后填写 EasyImage 图床--API 设置的 `Token API` 和 `Token` 即可以了。(如上传失败注意查看日志内容，是否权限或版本兼容问题)
+
+![](https://img.17121203.xyz/i/2024/09/29/ni5e2j-0.webp)
+
 ## 七. WireGuard
 
 > 通过 Docker + [Wg-Easy](https://github.com/wg-easy/wg-easy) 快速部署 WireGuard VPN，实现远程办公组网

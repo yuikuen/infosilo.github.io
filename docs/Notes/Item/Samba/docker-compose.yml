@@ -1,0 +1,26 @@
+version: '3.4'
+services:
+  samba:
+    image: dperson/samba
+    container_name: samba
+    environment:
+      TZ: Asia/Shanghai
+    restart: unless-stopped
+    ports:
+      - "137:137/udp"
+      - "138:138/udp"
+      - "139:139/tcp"
+      - "445:445/tcp"
+    volumes:
+      - /opt/data/ds-m1:/data/ds-m1
+      - /opt/data/ds-t2;/data/ds-t2
+    command:
+      - '-n'
+      - '-p'    
+      - '-r'
+      - '-u'
+      - "admin;passwd"
+      - "-s"
+      - "ds-m1;/data/ds-m1;yes;no;no;admin;admin;admin;Share for M1"
+      - "-s"
+      - "ds-t2;/data/ds-t2;yes;no;no;admin;admin;admin;Share for T2"

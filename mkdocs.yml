@@ -247,8 +247,18 @@ nav:
     - AI:
       - Deploy ChatGPT-Web: Notes/Item/AI/deploy-chatgpt-web.md
       - Deploy ChatGPT-Next-Web: Notes/Item/AI/deploy-chatgpt-next-web.md
+    - Bind:
+      - Yum Install Bind: Notes/Item/yum-install-bind.md
+      - Set Master/Slave: Notes/Item/set-master-slave.md
+    - Cert:
+      - Apply Certificate Using Certbot: Notes/Item/apply-certificate-using-certbot.md
+    - Cockpit:
+      - Yum Install Cockpit: Notes/Item/yum-install-cockpit.md
+    - Confluence:
+      - Deploy Confluence On Compose: Notes/Item/deploy-confluence-on-compose.md
     - Container:
       - Install Docker On Ubuntu24: Notes/Item/Container/install-docker-on-ubuntu.md
+      - Install Container1.6.8 On CentOS: Notes/Item/Container/install-container1.6.8-on-centos.md
       - Deploy Private Registry Server: Notes/Item/Container/deploy-private-registry-server.md
       - Docker Bridge Iptables Disabled: Notes/Item/Container/docker-bridge-iptables-disabled.md
     - GitLab:
@@ -261,6 +271,13 @@ nav:
       - Beauty Board: Notes/Item/MkDocs/beauty-board.md
     - Private:
       - Build Private Services: Notes/Item/Private/build-private-services.md
+    - Seata:
+      - Deploy Seata On CentOS: Notes/Item/Seata/deploy-seata-on-centos.md
+    - Sentinel:
+      - Deploy Sentinel On CentOS: Notes/Item/Sentinel/deploy-sentinel-on-centos.md
+    - SonarQube:
+      - Deploy SonarQube8.9 On CentOS: Notes/Item/SonarQube/deploy-sonarqube8.9-on-centos.md
+      - Deploy SonarQube9.8 On Compose: Notes/Item/SonarQube/deploy-sonarqube9.8-on-compose.md
     - Tomcat:
       - Deploy Tomcat: Notes/Item/Tomcat/deploy-tomcat.md
       - Deploy Tomcat On Docker: Notes/Item/Tomcat/deploy-tomcat-on-docker.md
@@ -275,6 +292,8 @@ nav:
       - Deploy Ubuntu-Server On RPI: Notes/System/ARM-RPI/deploy-ubuntu-server-on-rpi.md
     - GNU-Arch:
       - Install ArchLinux: Notes/System/GNU-Arch/install-archlinux.md
+    - GNU-CentOS:
+      - Set The NIC To ETH0: Notes/System/GNU-CentOS/set-the-nic-to-eth0.md
     - GNU-PVE:
       - PVE Hardware Info: Notes/System/GNU-PVE/pve-hardware-info.md
       - PVE Fake Death Handing: Notes/System/GNU-PVE/pve-fake-death-handing.md
@@ -303,6 +322,9 @@ nav:
       - HuoRong Manslaughter Explorer: Notes/Software/Security/huorong-manslaughter-explorer.md
     - VMware:
       - WMware Pro Free: Notes/Software/VMware/vmware-pro-free.md
+    - VsCode:
+      - Remote Compilation: Notes/Software/VsCode/remote-compilation.md
+      - Set Background Wallpaper: Notes/Software/VsCode/set-background-wallpaper.md
   - Fun:
     - Comic:
       - Deploy Tachidesk: Notes/Fun/Comic/deploy-tachidesk.md

@@ -1,5 +1,5 @@
 # Ignore DoWork directory and all its contents
-/opt/app/infosilo.github.io/docs/Notes/DoWork/
+docs/Notes/DoWork/
 
 # Ignore site directory and all its contents
-/opt/app/infosilo.github.io/site/
+site/

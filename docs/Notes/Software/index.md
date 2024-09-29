@@ -1,10 +1,10 @@
 <div class="grid cards" markdown>
 
--   :material-server: __Server__ for Build
+-   :material-nas: __NAS__ For Fun
 
-    [:octicons-arrow-right-24: Getting started](index.md)
+    [:octicons-arrow-right-24: Reference](Software/Nas-Qnap)
 
--   :material-notebook-multiple: __GPT-AI__ for Learning and Deployment
+-   :simple-vmware: __VMWARE__ for Deployment
 
     [:octicons-arrow-right-24: Reference](index.md)
 
