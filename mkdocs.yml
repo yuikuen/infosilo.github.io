@@ -27,7 +27,8 @@ theme:
   custom_dir: overrides
   logo: assets/images/Devops.png
   favicon: assets/images/favicon.png
-  # 可自行替换默认图标
+  # 可自行替换默认图标，图标可从官网搜索
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search
   icon:
     previous: fontawesome/solid/angles-left # 页脚导航:上一页
     next: fontawesome/solid/angles-right    # 页脚导航:下一页
@@ -269,8 +270,6 @@ nav:
       - Deploy Jenkins-Blueocean On Compose: Notes/Item/Jenkins/deploy-jenkins-blueocean-on-compose.md
     - MkDocs:
       - Beauty Board: Notes/Item/MkDocs/beauty-board.md
-    - Private:
-      - Build Private Services: Notes/Item/Private/build-private-services.md
     - Seata:
       - Deploy Seata On CentOS: Notes/Item/Seata/deploy-seata-on-centos.md
     - Sentinel:
@@ -292,8 +291,11 @@ nav:
       - Deploy Ubuntu-Server On RPI: Notes/System/ARM-RPI/deploy-ubuntu-server-on-rpi.md
     - GNU-Arch:
       - Install ArchLinux: Notes/System/GNU-Arch/install-archlinux.md
+      - Install ArchLinux-i3: Notes/System/GNU-Arch/install-archlinux-i3.md
+      - Install ArchLinux-i3wm: Notes/System/GNU-Arch/install-archlinux-i3wm.md
     - GNU-CentOS:
       - Set The NIC To ETH0: Notes/System/GNU-CentOS/set-the-nic-to-eth0.md
+      - Yum Install Chrony: Notes/System/GNU-CentOS/yum-install-chrony.md
     - GNU-PVE:
       - PVE Hardware Info: Notes/System/GNU-PVE/pve-hardware-info.md
       - PVE Fake Death Handing: Notes/System/GNU-PVE/pve-fake-death-handing.md
@@ -328,5 +330,7 @@ nav:
   - Fun:
     - Comic:
       - Deploy Tachidesk: Notes/Fun/Comic/deploy-tachidesk.md
+    - Services:
+      - Build Private Services: Notes/Fun/Services/build-private-services.md
   - Giscus:
     - giscus.md

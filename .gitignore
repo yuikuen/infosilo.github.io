@@ -1,5 +1,8 @@
 # Ignore DoWork directory and all its contents
 docs/Notes/DoWork/
 
+# Ignore Private directory and all its contents
+docs/Notes/Private/
+
 # Ignore site directory and all its contents
 site/

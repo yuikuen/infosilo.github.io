@@ -751,8 +751,7 @@ RUN pip install mkdocs-static-i18n \
  && pip install mkdocs-minify-plugin \
  && pip install mkdocs-git-revision-date-localized-plugin \
  && pip install mkdocs-git-committers-plugin-2 \
- && pip install mkdocs-git-authors-plugin \
- && pip install mkdocs-git-revision-date-localized-plugin
+ && pip install mkdocs-git-authors-plugin
 $ docker build -t yuikuen/mkdocs-material:9.5.25
 ```
 
@@ -840,7 +839,14 @@ server {
 
 ### 5.3 Build & Push
 
-创建定时构建 & 推送脚本和任务
+创建过滤目录，设置定时构建 & 推送脚本和任务
+
+```sh
+$ cat > /opt/app/infosilo.github.io/.gitignore <<EOF
+# Ignore site directory and all its contents
+site/
+EOF
+```
 
 ```sh
 #!/bin/bash
@@ -859,6 +865,9 @@ cd $path
 if docker run --rm --name docs -v ${PWD}:/docs yuikuen/mkdocs-material:9.5.25 build; then
     # 如果执行成功，则输出结果到日志文件，并添加时间戳
     echo "$timestamp - ok" >> $log_file
+    
+    # 移除被跟踪的目录（如果存在），上传时过滤站点目录
+    git rm -r --cached $path/site/ 2>/dev/null
 
     # 添加所有文件到Git
     git add .

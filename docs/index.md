@@ -30,7 +30,9 @@
 
     ---
 
-    :material-server:{ .lg .middle } [Build __Private__ Services](Notes/Item/Private/build-private-services/)
+    :material-server:{ .lg .middle } [Build __Private__ Services](Notes/Fun/Services/build-private-services)
+
+    :material-book:{ .lg .middle } [Deploy __Private__ Comic](Notes/Fun/Comic/deploy-tachidesk)
 
 <div class="grid cards" style="display:grid; grid-template-columns: 49% 49% !important;" markdown>
 
@@ -45,6 +47,8 @@
 -   :material-tools:{ .lg .middle } __Software Tools__
 
     ---
+
+    :simple-vmware:{ .lg .middle } [WMware Pro __Free__](Notes/Software/VMware/vmware-pro-free)
 
     更新中...
 
