@@ -15,6 +15,13 @@
         <xhtml:link rel="alternate" hreflang="zh" href="https://www.17121203.xyz/zh/giscus/"/>
     </url>
     <url>
+        <loc>https://www.17121203.xyz/Notes/DoWork/Test/</loc>
+        <lastmod>2024-09-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.17121203.xyz/Notes/DoWork/Test/"/>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.17121203.xyz/zh/Notes/DoWork/Test/"/>
+    </url>
+    <url>
         <loc>https://www.17121203.xyz/Notes/DoWork/find-ding-group-id/</loc>
         <lastmod>2024-09-29</lastmod>
         <changefreq>daily</changefreq>
@@ -328,6 +335,13 @@
         <changefreq>daily</changefreq>
         <xhtml:link rel="alternate" hreflang="zh" href="https://www.17121203.xyz/zh/giscus/"/>
         <xhtml:link rel="alternate" hreflang="en" href="https://www.17121203.xyz/giscus/"/>
+    </url>
+    <url>
+        <loc>https://www.17121203.xyz/zh/Notes/DoWork/Test/</loc>
+        <lastmod>2024-09-29</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="zh" href="https://www.17121203.xyz/zh/Notes/DoWork/Test/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://www.17121203.xyz/Notes/DoWork/Test/"/>
     </url>
     <url>
         <loc>https://www.17121203.xyz/zh/Notes/DoWork/find-ding-group-id/</loc>
