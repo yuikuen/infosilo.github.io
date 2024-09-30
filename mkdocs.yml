@@ -295,7 +295,26 @@ nav:
       - Install ArchLinux-i3wm: Notes/System/GNU-Arch/install-archlinux-i3wm.md
     - GNU-CentOS:
       - Set The NIC To ETH0: Notes/System/GNU-CentOS/set-the-nic-to-eth0.md
+      - Set Sudo Permissions: Notes/System/GNU-CentOS/set-sudo-permissions.md
+      - Set Dual IP Proxy Forwarding: Notes/System/GNU-CentOS/set-dual-ip-proxy-forwarding.md
+      - Update Not Upgrade Kernel: Notes/System/GNU-CentOS/update-not-upgrade-kernel.md
+      - Upgrade Kernel Use RPM: Notes/System/GNU-CentOS/upgrade-kernel-use-rpm.md
+      - Upgrade OpenSSL3: Notes/System/GNU-CentOS/upgrade-openssl3.md
+      - Upgrade Make3.82: Notes/System/GNU-CentOS/upgrade-make3.82.md
+      - Upgrade Glibc2.28: Notes/System/GNU-CentOS/upgrade-glibc2.28.md
+      - Upgrade Gcc&Glibc-0: Notes/System/GNU-CentOS/upgrade-gcc-glibc-0.md
+      - Upgrade Gcc&Glibc-1: Notes/System/GNU-CentOS/upgrade-gcc-glibc-1.md
+      - Upgrade Gcc&Glibc-2: Notes/System/GNU-CentOS/upgrade-gcc-glibc-2.md
+      - Solve RAR Decompression: Notes/System/GNU-CentOS/solve-rar-decompression.md
+      - Solve Cmake No Found: Notes/System/GNU-CentOS/solve-cmake-no-found.md
+      - Solve Install Error On RPM: Notes/System/GNU-CentOS/solve-install-error-on-rpm.md
+      - Install Libzip: Notes/System/GNU-CentOS/install-Libzip.md
+      - Install FFmpeg: Notes/System/GNU-CentOS/install-ffmpeg.md
+      - Yum Install JQ: Notes/System/GNU-CentOS/yum-install-jq.md
+      - Yum Install Git: Notes/System/GNU-CentOS/yum-install-git.md
+      - Yum Install Lynis: Notes/System/GNU-CentOS/yum-install-lynis.md
       - Yum Install Chrony: Notes/System/GNU-CentOS/yum-install-chrony.md
+      - Yum Install Google-Authenticator: Notes/System/GNU-CentOS/yum-install-google-authenticator.md
     - GNU-PVE:
       - PVE Hardware Info: Notes/System/GNU-PVE/pve-hardware-info.md
       - PVE Fake Death Handing: Notes/System/GNU-PVE/pve-fake-death-handing.md
@@ -315,6 +334,7 @@ nav:
       - Solve Err_Cert_Invalid: Notes/Software/Chrome/solve-err_cert_invalid.md
       - Solve Neterr_Cert_Authority_Invalid: Notes/Software/Chrome/solve-neterr_cert_authority_invalid.md
     - Nas-Qnap:
+      - Changes Docker Source: Notes/Software/Nas-Qnap/changes-docker-source.md
       - Deploy VaultWarden On Qnap: Notes/Software/Nas-Qnap/deploy-vaultwarden-on-qnap.md
     - NoteBook:
       - EliteBook Recore Display Memory: Notes/Software/NoteBook/elitebook-recore-display-memory.md

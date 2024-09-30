@@ -2,10 +2,10 @@
 
 -   :material-nas: __NAS__ For Fun
 
-    [:octicons-arrow-right-24: Reference](Notes/Software/Nas-Qnap/deploy-vaultwarden-on-qnap/)
+    [:octicons-arrow-right-24: Reference](Nas-Qnap/deploy-vaultwarden-on-qnap/)
 
 -   :simple-vmware: __VMWARE__ for Deployment
 
-    [:octicons-arrow-right-24: Reference](index.md)
+    [:octicons-arrow-right-24: Reference](VMware/vmware-pro-free/)
 
 </div>
