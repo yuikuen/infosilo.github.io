@@ -323,6 +323,8 @@ nav:
     - GNU-Rocky:
       - Rocky9 Changes Source: Notes/System/GNU-Rocky/rocky9-changes-source.md
     - GNU-Ubuntu:
+      - Change The NIC to ETH0: Notes/System/GNU-Ubuntu/change-the-nic-to-eth0.md
+      - Ubuntu24 Basic Config: Notes/System/GNU-Ubuntu/ubuntu24-basic-config.md
       - Ubuntu24 Changes Source: Notes/System/GNU-Ubuntu/ubuntu24-changes-source.md
     - MS-Win:
       - Security Policies Prevent Guest Access: Notes/System/MS-Win/security-policies-prevent-guest-access.md
