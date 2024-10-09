@@ -1,6 +1,6 @@
 > Rocky Linux 更换国内镜像源
 
-Rocky Linux 9 最小化安装默认 repo 
+Rocky Linux 9 最小化安装默认 repo
 
 ```sh
 $ dnf repolist
@@ -23,7 +23,7 @@ total 20
 
 ## 二. 配置方法
 
-### 2.1 基本系统
+### 2.1 基本源
 
 将系统的镜像源改为国内镜像源
 
@@ -76,3 +76,35 @@ $ sed -e 's!^metalink=!#metalink=!g' \
 $ dnf clean all 
 $ dnf makecache
 ```
+
+### 2.3 恢复更换
+
+有时因区域问题，可能会导致某些软件包未能成功下载，可尝试更换源处理
+
+```sh
+# 将国内镜像源恢复默认，再将地址改为阿里云
+$ sed -e 's|^#mirrorlist=|mirrorlist=|g' \
+    -e 's|^baseurl=https://mirrors.zju.edu.cn/rocky|#baseurl=http://dl.rockylinux.org/$contentdir|g' \
+    -i.bak \
+    /etc/yum.repos.d/[Rr]ocky*.repo
+
+$ sed -e 's|^mirrorlist=|#mirrorlist=|g' \
+    -e 's|^#baseurl=http://dl.rockylinux.org/$contentdir|baseurl=https://mirrors.aliyun.com/rockylinux|g' \
+    -i.bak \
+    /etc/yum.repos.d/[Rr]ocky*.repo
+
+# EPEL 同理更换
+$ sed -e 's|^#metalink=|metalink=|g' \
+    -e 's|^baseurl=https://mirrors.zju.edu.cn|#baseurl=https://download.example/pub|g' \
+    -i.bak \
+    /etc/yum.repos.d/epel{,-testing}.repo
+
+$ sed -e 's|^metalink=|#metalink=|g' \
+    -e 's|^#baseurl=https://download.example/pub|baseurl=https://mirrors.aliyun.com|g' \
+    -i.bak \
+    /etc/yum.repos.d/epel{,-testing}.repo
+```
+
+**参考链接**
+
+Rocky Linux yum/dnf repo/mirrors 国内镜像列表及更换方法：<https://www.cnblogs.com/sysin/p/18256194>

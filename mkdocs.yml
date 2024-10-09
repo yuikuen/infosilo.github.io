@@ -294,9 +294,14 @@ nav:
       - Install ArchLinux-i3: Notes/System/GNU-Arch/install-archlinux-i3.md
       - Install ArchLinux-i3wm: Notes/System/GNU-Arch/install-archlinux-i3wm.md
     - GNU-CentOS:
+      - Install Libzip: Notes/System/GNU-CentOS/install-Libzip.md
+      - Install FFmpeg: Notes/System/GNU-CentOS/install-ffmpeg.md
       - Set The NIC To ETH0: Notes/System/GNU-CentOS/set-the-nic-to-eth0.md
       - Set Sudo Permissions: Notes/System/GNU-CentOS/set-sudo-permissions.md
       - Set Dual IP Proxy Forwarding: Notes/System/GNU-CentOS/set-dual-ip-proxy-forwarding.md
+      - Solve RAR Decompression: Notes/System/GNU-CentOS/solve-rar-decompression.md
+      - Solve Cmake No Found: Notes/System/GNU-CentOS/solve-cmake-no-found.md
+      - Solve Install Error On RPM: Notes/System/GNU-CentOS/solve-install-error-on-rpm.md
       - Update Not Upgrade Kernel: Notes/System/GNU-CentOS/update-not-upgrade-kernel.md
       - Upgrade Kernel Use RPM: Notes/System/GNU-CentOS/upgrade-kernel-use-rpm.md
       - Upgrade OpenSSL3: Notes/System/GNU-CentOS/upgrade-openssl3.md
@@ -305,30 +310,28 @@ nav:
       - Upgrade Gcc&Glibc-0: Notes/System/GNU-CentOS/upgrade-gcc-glibc-0.md
       - Upgrade Gcc&Glibc-1: Notes/System/GNU-CentOS/upgrade-gcc-glibc-1.md
       - Upgrade Gcc&Glibc-2: Notes/System/GNU-CentOS/upgrade-gcc-glibc-2.md
-      - Solve RAR Decompression: Notes/System/GNU-CentOS/solve-rar-decompression.md
-      - Solve Cmake No Found: Notes/System/GNU-CentOS/solve-cmake-no-found.md
-      - Solve Install Error On RPM: Notes/System/GNU-CentOS/solve-install-error-on-rpm.md
-      - Install Libzip: Notes/System/GNU-CentOS/install-Libzip.md
-      - Install FFmpeg: Notes/System/GNU-CentOS/install-ffmpeg.md
+      - Yum Install GCC: Notes/System/GNU-CentOS/yum-install-gcc.md
       - Yum Install JQ: Notes/System/GNU-CentOS/yum-install-jq.md
       - Yum Install Git: Notes/System/GNU-CentOS/yum-install-git.md
       - Yum Install Lynis: Notes/System/GNU-CentOS/yum-install-lynis.md
       - Yum Install Chrony: Notes/System/GNU-CentOS/yum-install-chrony.md
       - Yum Install Google-Authenticator: Notes/System/GNU-CentOS/yum-install-google-authenticator.md
     - GNU-PVE:
-      - PVE Hardware Info: Notes/System/GNU-PVE/pve-hardware-info.md
       - PVE Fake Death Handing: Notes/System/GNU-PVE/pve-fake-death-handing.md
+      - PVE Hardware Info: Notes/System/GNU-PVE/pve-hardware-info.md
       - PVE8.x Changes Source: Notes/System/GNU-PVE/pve8.x-changes-source.md
       - PVE8.x Remove Subscription: Notes/System/GNU-PVE/pve8.x-remove-subscription.md
     - GNU-Rocky:
+      - Cannot Modify SSH Port: Notes/System/GNU-Rocky/cannot-modify-ssh-port.md
       - Rocky9 Changes Source: Notes/System/GNU-Rocky/rocky9-changes-source.md
     - GNU-Ubuntu:
       - Change The NIC to ETH0: Notes/System/GNU-Ubuntu/change-the-nic-to-eth0.md
       - Ubuntu24 Basic Config: Notes/System/GNU-Ubuntu/ubuntu24-basic-config.md
       - Ubuntu24 Changes Source: Notes/System/GNU-Ubuntu/ubuntu24-changes-source.md
+      - Ubuntu24 On Br_Netfilter: Notes/System/GNU-Ubuntu/ubuntu24-on-br_netfilter.md
     - MS-Win:
-      - Security Policies Prevent Guest Access: Notes/System/MS-Win/security-policies-prevent-guest-access.md
       - Home Edition Open Gpedit: Notes/System/MS-Win/home-edition-open-gpedit.md
+      - Security Policies Prevent Guest Access: Notes/System/MS-Win/security-policies-prevent-guest-access.md
   - Software:
     - Notes/Software/index.md
     - Chrome:
