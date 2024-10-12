@@ -285,6 +285,7 @@ nav:
     - WireGuard:
       - Deploy WG-Easy: Notes/Item/WireGuard/deploy-wg-easy.md
       - Deploy WG On CentOS7: Notes/Item/WireGuard/deploy-wg-on-centos7.md
+      - Set Network Transit: Notes/Item/WireGuard/set-network-transit.md
   - System:
     - Notes/System/index.md
     - ARM-RPI:

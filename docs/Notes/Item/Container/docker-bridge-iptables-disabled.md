@@ -75,6 +75,8 @@ bridge                409600  1 br_netfilter
 $ sysctl net.bridge.bridge-nf-call-iptables
 net.bridge.bridge-nf-call-iptables = 1
 
-$ docker info; systemctl status docker（systemctl daemon-reload;systemctl restart docker）
+$ systemctl daemon-reload;systemctl restart docker
+$ docker info; systemctl status docker
 ```
+
 最后 WARNING 错误提示已无；
