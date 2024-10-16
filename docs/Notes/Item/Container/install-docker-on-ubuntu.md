@@ -30,13 +30,13 @@ $ sudo add-apt-repository  \
 ### 2.1 安装最新
 
 ```sh
-$ sudo apt-get update
 $ sudo apt install docker-ce docker-ce-cli containerd.io -y
 ```
 
 安装完成后，Docker 服务将自动启动
 
 ```sh
+$ sudo systemctl enable --now docker
 $ sudo docker --version; sudo systemctl status docker
 ```
 

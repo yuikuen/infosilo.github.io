@@ -258,10 +258,11 @@ nav:
     - Confluence:
       - Deploy Confluence On Compose: Notes/Item/deploy-confluence-on-compose.md
     - Container:
-      - Install Docker On Ubuntu24: Notes/Item/Container/install-docker-on-ubuntu.md
-      - Install Container1.6.8 On CentOS: Notes/Item/Container/install-container1.6.8-on-centos.md
       - Deploy Private Registry Server: Notes/Item/Container/deploy-private-registry-server.md
       - Docker Bridge Iptables Disabled: Notes/Item/Container/docker-bridge-iptables-disabled.md
+      - Install Container1.6.8 On CentOS: Notes/Item/Container/install-container1.6.8-on-centos.md
+      - Install Docker On Rocky: Notes/Item/Container/install-docker-on-rocky.md
+      - Install Docker On Ubuntu: Notes/Item/Container/install-docker-on-ubuntu.md
     - GitLab:
       - Deploy GitLab15 On Compose: Notes/Item/GitLab/deploy-gitlab15-on-compose.md
     - Harbor:
@@ -270,6 +271,8 @@ nav:
       - Deploy Jenkins-Blueocean On Compose: Notes/Item/Jenkins/deploy-jenkins-blueocean-on-compose.md
     - MkDocs:
       - Beauty Board: Notes/Item/MkDocs/beauty-board.md
+      - Deploy MkDocs On Docker: Notes/Item/MkDocs/deploy-mkdocs-on-docker.md
+      - Set Script Push Code: Notes/Item/MkDocs/set-script-push-code.md
     - Seata:
       - Deploy Seata On CentOS: Notes/Item/Seata/deploy-seata-on-centos.md
     - Sentinel:
