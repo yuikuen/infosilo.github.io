@@ -263,6 +263,8 @@ nav:
       - Install Container1.6.8 On CentOS: Notes/Item/Container/install-container1.6.8-on-centos.md
       - Install Docker On Rocky: Notes/Item/Container/install-docker-on-rocky.md
       - Install Docker On Ubuntu: Notes/Item/Container/install-docker-on-ubuntu.md
+    - Crontab:
+      - Docker Execution Error: Notes/Item/Crontab/docker-execution-error.md
     - GitLab:
       - Deploy GitLab15 On Compose: Notes/Item/GitLab/deploy-gitlab15-on-compose.md
     - Harbor:
@@ -273,6 +275,13 @@ nav:
       - Beauty Board: Notes/Item/MkDocs/beauty-board.md
       - Deploy MkDocs On Docker: Notes/Item/MkDocs/deploy-mkdocs-on-docker.md
       - Set Script Push Code: Notes/Item/MkDocs/set-script-push-code.md
+    - Redis:
+      - Install Redis6 On CentOS(Gcc4.8.5): Notes/Item/Redis/install-redis6-on-centos-1.md
+      - Install Redis6 On CentOS(Gcc9.5.0): Notes/Item/Redis/install-redis6-on-centos-2.md
+    - RuoYi:
+      - Deploy RuoYi Cloud On CentoOS: Notes/Item/RuoYi/deploy-ruoyi-cloud-on-centos.md
+      - Deploy RuoYi SpingBoot On CentOS: Notes/Item/RuoYi/deploy-ruoyi-springboot-on-centos.md
+      - Deploy RuoYi Vue On CentOS: Notes/Item/RuoYi/deploy-ruoyi-vue-on-centos.md
     - Seata:
       - Deploy Seata On CentOS: Notes/Item/Seata/deploy-seata-on-centos.md
     - Sentinel:
@@ -289,6 +298,9 @@ nav:
       - Deploy WG-Easy: Notes/Item/WireGuard/deploy-wg-easy.md
       - Deploy WG On CentOS7: Notes/Item/WireGuard/deploy-wg-on-centos7.md
       - Set Network Transit: Notes/Item/WireGuard/set-network-transit.md
+    - Wordpress:
+      - Deploy WordPress On Docker: Notes/Item/Wordpress/deploy-wordpress-on-docker.md
+      - Meter Display Error: Notes/Item/Wordpress/meter-display-error.md
   - System:
     - Notes/System/index.md
     - ARM-RPI:

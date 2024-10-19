@@ -26,19 +26,23 @@
 
 <div class="grid cards" style="display: grid; grid-template-columns: 1fr;" markdown>
 
--   :material-star-shooting:{ .lg .middle } __Program Item__
+-   :material-star-shooting:{ .lg .middle } __Recommended Item__
 
     ---
 
-    :material-server:{ .lg .middle } [Build __Private__ Services](Notes/Fun/Services/build-private-services)
+    :material-numeric-0:{ .lg .middle } [__ChatGPT-Web__](https://github.com/Chanzhaoyu/chatgpt-web)
 
-    :material-book:{ .lg .middle } [Deploy __Private__ Comic](Notes/Fun/Comic/deploy-tachidesk)
+    :material-numeric-1:{ .lg .middle } [__ChatGPT-Next-Web__](https://github.com/ChatGPTNextWeb/ChatGPT-Next-Web)
+
+    :material-numeric-2:{ .lg .middle } [__ChatGPT-Next-Web-LangChain__](https://github.com/Hk-Gosuto/ChatGPT-Next-Web-LangChain)
 
 <div class="grid cards" style="display:grid; grid-template-columns: 49% 49% !important;" markdown>
 
--   :material-file-code:{ .lg .middle } __Program Grammar__
+-   :material-file-code:{ .lg .middle } __Private Test__
 
     ---
+
+    :material-server:{ .lg .middle } [__Build Private Services__](Notes/Fun/Services/build-private-services)
 
     更新中...
 
