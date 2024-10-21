@@ -38,7 +38,7 @@
 
 <div class="grid cards" style="display:grid; grid-template-columns: 49% 49% !important;" markdown>
 
--   :material-file-code:{ .lg .middle } __Private Test__
+-   :material-note:{ .lg .middle } __Private Test__
 
     ---
 

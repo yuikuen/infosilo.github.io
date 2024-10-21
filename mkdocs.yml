@@ -269,15 +269,27 @@ nav:
       - Deploy GitLab15 On Compose: Notes/Item/GitLab/deploy-gitlab15-on-compose.md
     - Harbor:
       - Deploy Harbor2.7 On Compose: Notes/Item/Harbor/deploy-harbor2.7-on-compose.md
+    - Hugo:
+      - Deploy Blog On Hugo: Notes/Item/Hugo/deploy-blog-on-hugo.md
     - Jenkins:
       - Deploy Jenkins-Blueocean On Compose: Notes/Item/Jenkins/deploy-jenkins-blueocean-on-compose.md
     - MkDocs:
       - Beauty Board: Notes/Item/MkDocs/beauty-board.md
       - Deploy MkDocs On Docker: Notes/Item/MkDocs/deploy-mkdocs-on-docker.md
       - Set Script Push Code: Notes/Item/MkDocs/set-script-push-code.md
+    - RabbitMQ:
+      - Deploy HA-RabbitMQ: Notes/Item/RabbitMQ/deploy-ha-rabbitmq.md
+      - Install RabbitMQ On CentOS: Notes/Item/RabbitMQ/install-rabbitmq-on-centos.md
+      - Start Missing Erlang: Notes/Item/RabbitMQ/start-missing-erlang.md
+      - Use Helm Deploy Bitnami-RabbitMQ: Notes/Item/RabbitMQ/use-helm-deploy-bitnami-rabbitmq.md
+      - Use Helm Deploy HA-RabbitMQ: Notes/Item/RabbitMQ/use-helm-deploy-ha-rabbitmq.md
+      - Use Helm Deploy NFS & HA-RabbitMQ: Notes/Item/RabbitMQ/use-helm-deploy-nfs-ha-rabbitmq.md
+      - Use Operator Deploy HA-RabbitMQ: Notes/Item/RabbitMQ/use-operator-deploy-ha-rabbitmq.md
+      - Use RPM Install RabbitMQ On CentOS: Notes/Item/RabbitMQ/use-rpm-install-rabbitmq-on-centos.md
     - Redis:
       - Install Redis6 On CentOS(Gcc4.8.5): Notes/Item/Redis/install-redis6-on-centos-1.md
       - Install Redis6 On CentOS(Gcc9.5.0): Notes/Item/Redis/install-redis6-on-centos-2.md
+      - StartUp Error: Notes/Item/Redis/startup-error.md
     - RuoYi:
       - Deploy RuoYi Cloud On CentoOS: Notes/Item/RuoYi/deploy-ruoyi-cloud-on-centos.md
       - Deploy RuoYi SpingBoot On CentOS: Notes/Item/RuoYi/deploy-ruoyi-springboot-on-centos.md
