@@ -260,6 +260,9 @@ nav:
     - Container:
       - Deploy Private Registry Server: Notes/Item/Container/deploy-private-registry-server.md
       - Docker Bridge Iptables Disabled: Notes/Item/Container/docker-bridge-iptables-disabled.md
+      - Dockerfile Build Jenkins-BlueOcean: Notes/Item/Container/dockerfile-build-jenkins-blueocean.md
+      - Dockerfile Build OpenJDK8u327(1001): Notes/Item/Container/dockerfile-build-openjdk8u327.md
+      - Dockerfile Build OpenJDK8u327-font(1001): Notes/Item/Container/dockerfile-build-openjdk8u327-font.md
       - Install Container1.6.8 On CentOS: Notes/Item/Container/install-container1.6.8-on-centos.md
       - Install Docker On Rocky: Notes/Item/Container/install-docker-on-rocky.md
       - Install Docker On Ubuntu: Notes/Item/Container/install-docker-on-ubuntu.md
@@ -284,8 +287,10 @@ nav:
       - Use Helm Deploy Bitnami-RabbitMQ: Notes/Item/RabbitMQ/use-helm-deploy-bitnami-rabbitmq.md
       - Use Helm Deploy HA-RabbitMQ: Notes/Item/RabbitMQ/use-helm-deploy-ha-rabbitmq.md
       - Use Helm Deploy NFS & HA-RabbitMQ: Notes/Item/RabbitMQ/use-helm-deploy-nfs-ha-rabbitmq.md
+      - Use Nginx Set HA-RabbitMQ: Notes/Item/RabbitMQ/use-nginx-set-ha-rabbitmq.md
       - Use Operator Deploy HA-RabbitMQ: Notes/Item/RabbitMQ/use-operator-deploy-ha-rabbitmq.md
       - Use RPM Install RabbitMQ On CentOS: Notes/Item/RabbitMQ/use-rpm-install-rabbitmq-on-centos.md
+      - Use Statefulset Deploy HA-RabbitMQ: Notes/Item/RabbitMQ/use-statefulset-deploy-ha-rabbitmq.md
     - Redis:
       - Install Redis6 On CentOS(Gcc4.8.5): Notes/Item/Redis/install-redis6-on-centos-1.md
       - Install Redis6 On CentOS(Gcc9.5.0): Notes/Item/Redis/install-redis6-on-centos-2.md
