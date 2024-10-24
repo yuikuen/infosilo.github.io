@@ -36,6 +36,14 @@
 
     :material-numeric-2:{ .lg .middle } [__ChatGPT-Next-Web-LangChain__](https://github.com/Hk-Gosuto/ChatGPT-Next-Web-LangChain)
 
+    :material-numeric-3:{ .lg .middle } [__ChatGPT-Web-Midjourney-Proxy__](https://github.com/Dooy/chatgpt-web-midjourney-proxy)
+
+    :material-numeric-4:{ .lg .middle } [__LibreChat__](https://github.com/danny-avila/LibreChat)
+
+    :material-numeric-5:{ .lg .middle } [__Lobe-Chat__](https://github.com/lobehub/lobe-chat)
+
+    :material-numeric-6:{ .lg .middle } [__Midjourney-Proxy__](https://github.com/novicezk/midjourney-proxy)
+
 <div class="grid cards" style="display:grid; grid-template-columns: 49% 49% !important;" markdown>
 
 -   :material-note:{ .lg .middle } __Private Test__

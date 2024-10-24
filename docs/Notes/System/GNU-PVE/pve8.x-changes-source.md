@@ -1,3 +1,5 @@
+> PVE-8.x 更换镜像源
+
 由于自带的软件源速度较慢，此处选择科大源：https://mirrors.ustc.edu.cn 或 清华源：https://mirrors4.tuna.tsinghua.edu.cn；涉入的软件源有三个，分别为 debian、pve、ceph，需要分别修改以下文件。
 
 PS：提前备份相关配置文件

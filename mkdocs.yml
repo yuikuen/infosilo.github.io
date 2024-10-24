@@ -263,6 +263,7 @@ nav:
       - Docker Bridge Iptables Disabled: Notes/Item/Container/docker-bridge-iptables-disabled.md
       - Docker Change Default Path: Notes/Item/Container/docker-change-default-path.md
       - Docker Command Prune: Notes/Item/Container/docker-command-prune.md
+      - Docker Command Ps: Notes/Item/Container/docker-command-ps.md
       - Docker Compose Up Timeout: Notes/Item/Container/docker-compose-up-timeout.md
       - Docker Compose Yaml Command: Notes/Item/Container/docker-compose-yaml-command.md
       - Docker Compose Yaml Healthcheck: Notes/Item/Container/docker-compose-yaml-healthcheck.md
@@ -287,9 +288,18 @@ nav:
     - GitLab:
       - Deploy GitLab15 On Compose: Notes/Item/GitLab/deploy-gitlab15-on-compose.md
     - Harbor:
-      - Deploy Harbor2.7 On Compose: Notes/Item/Harbor/deploy-harbor2.7-on-compose.md
+      - Deploy Harbor Example: Notes/Item/Harbor/deploy-harbor-example.md
+      - Deploy Harbor2.7: Notes/Item/Harbor/deploy-harbor2.7.md
+      - Deploy Harbor2.10: Notes/Item/Harbor/deploy-harbor2.10.md
+      - Harbor Integrate OpenLDAP: Notes/Item/Harbor/harbor-integrate-openldap.md
     - Hugo:
       - Deploy Blog On Hugo: Notes/Item/Hugo/deploy-blog-on-hugo.md
+    - Java:
+      - Src Install OpenJDK11: Notes/Item/Java/src-install-OpenJDK11.md
+      - Src Install OracleJDK8: Notes/Item/Java/src-install-OracleJDK8.md
+      - Yum Install OpenJDK11: Notes/Item/Java/yum-install-openjdk11.md
+    - Jeecg:
+      - Deploy Jeecg-Boot: Notes/Item/Jeecg/deploy-jeecg-boot.md
     - Jenkins:
       - Deploy Jenkins-Blueocean On Compose: Notes/Item/Jenkins/deploy-jenkins-blueocean-on-compose.md
     - MkDocs:
@@ -366,8 +376,15 @@ nav:
       - Yum Install Chrony: Notes/System/GNU-CentOS/yum-install-chrony.md
       - Yum Install Google-Authenticator: Notes/System/GNU-CentOS/yum-install-google-authenticator.md
     - GNU-PVE:
+      - PVE Del LVM Space: Notes/System/GNU-PVE/pve-del-lvm-space.md
       - PVE Fake Death Handing: Notes/System/GNU-PVE/pve-fake-death-handing.md
+      - PVE Hard Drive Passthrough: Notes/System/GNU-PVE/pve-hard-drive-passthrough.md
       - PVE Hardware Info: Notes/System/GNU-PVE/pve-hardware-info.md
+      - PVE Install Tiny-Win: Notes/System/GNU-PVE/pve-install-tiny-win.md
+      - PVE Mount Hard Disk: Notes/System/GNU-PVE/pve-mount-hard-disk.md
+      - PVE VM Disk Expand: Notes/System/GNU-PVE/pve-vm-disk-expand.md
+      - PVE7.x Changes Source: Notes/System/GNU-PVE/pve7.x-changes-source.md
+      - PVE7.x Unsubscribe: Notes/System/GNU-PVE/pve7.x-unsubscribe.md
       - PVE8.x Changes Source: Notes/System/GNU-PVE/pve8.x-changes-source.md
       - PVE8.x Remove Subscription: Notes/System/GNU-PVE/pve8.x-remove-subscription.md
     - GNU-Rocky:
