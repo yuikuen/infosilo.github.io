@@ -1,0 +1,21 @@
+# [站点信息]
+site_name: Yc's Info Silo
+site_url: https://www.infosilo.tech
+site_author: Mr.Yuen
+site_description: >-
+  mó dāo bú wù kǎn chái gōng
+
+# [仓库信息]
+edit_uri: edit/main/docs/
+repo_name: yuikuen/infosilo.github.io
+repo_url: https://github.com/yuikuen/infosilo.github.io.git
+
+# [版权声明]
+copyright: >-
+  Copyright &copy; 2024 - now | 🔞 Yuen / All Rights Reserved. |
+  <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备202425834号</a>
+
+# [主题样式]
+theme:
+  name: material
+  custom_dir: overrides

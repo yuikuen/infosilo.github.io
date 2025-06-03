@@ -1,11 +1,3 @@
-# Info-Silo
-
-## Build Methods（构建方法）
-
-使用 MkDocs-Material 官方镜像安装 Plugins，再通过 Docker 构建部署
-
-## Dockerfile
-```
 FROM squidfunk/mkdocs-material:9.6.14
 # 创建虚拟环境并安装 mkdocs-static-i18n 插件
 #RUN python3 -m venv /venv
@@ -16,6 +8,3 @@ RUN pip install mkdocs-static-i18n \
  && pip install mkdocs-git-revision-date-localized-plugin \
  && pip install mkdocs-git-committers-plugin-2 \
  && pip install mkdocs-git-authors-plugin
-```
-
-docker build -f Dockerfile-mkdocs -t infosilo/mkdocs-material:9.6.14 .
