@@ -13,9 +13,11 @@ repo_url: https://github.com/yuikuen/infosilo.github.io.git
 # [版权声明]
 copyright: >-
   Copyright &copy; 2024 - now | 🔞 Yuen / All Rights Reserved. |
-  <a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备202425834号</a>
+ #<a href="https://beian.miit.gov.cn/" target="_blank">粤ICP备202425834号</a>
 
 # [主题样式]
 theme:
   name: material
   custom_dir: overrides
+  # 可自行替换默认图标，图标可从官网搜索
+  # https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#search

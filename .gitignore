@@ -1,0 +1,5 @@
+# Ignore Private directory and all its contents
+private/
+
+# Ignore site directory and all its contents
+mkdocs/site/
