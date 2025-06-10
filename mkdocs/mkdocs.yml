@@ -106,6 +106,7 @@ plugins:
           build: true
           nav_translations:
             Home: 首页
+
   # git插件需要放在i18n下面,否则报错无法serve
   - git-revision-date-localized:
       enabled: true # 每篇文章底部显示创建/更新时间
@@ -227,3 +228,18 @@ extra_css:
 # 以Key为标题名,Value仅指向文件
 nav:
   - Home: index.md
+  - Program Grammar OS:
+    - Program Grammar:
+      - Command: Notes/Grammar/Command/index.md
+      - Bash: Notes/Grammar/Bash/index.md
+      - JSON: Notes/Grammar/JSON/index.md
+      - YAML: Notes/Grammar/YAML/index.md
+    - Operation System:
+      - GNU/Linux: Notes/System/Linux/index.md
+      - Windows: Notes/System/Windows/index.md
+      - OS X: Notes/System/OS-X/index.md
+  - DevOps:
+    - Core-OS: 
+      - Core-OS: Notes/DevOps/Core-OS/index.md
+      - Docker: Notes/DevOps/Docker/index.md
+      - Kubernetes: Notes/DevOps/Kubernetes/index.md

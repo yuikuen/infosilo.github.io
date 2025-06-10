@@ -1,6 +1,6 @@
 # Welcome to My InfoSilo
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+For Full Documentation Visit [mkdocs.org](https://www.mkdocs.org).
 
 ## GitHub Info
 
