@@ -1,5 +1,3 @@
 # Site
 
-## Hugo
-
 ## MkDocs

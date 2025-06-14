@@ -4,4 +4,3 @@ private/
 # Ignore site directory and all its contents
 mkdocs/site/
 
-hugo/public/
